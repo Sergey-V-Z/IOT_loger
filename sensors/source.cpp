@@ -13,6 +13,8 @@ Source::Source(QString id, QSettings *settings, QDateTime *date,QObject *parent)
     Path = QFileInfo(configFile.absolutePath(),Path).absoluteFilePath()+ "/";
     log_file = new QFile ();
     Date = date;
+    //настройка буферезации данных
+    buffCount = settings->value ("bufferCount").toInt ();
 }
 
 Source::~Source()
@@ -151,25 +153,39 @@ void Source::WriteToFile(QString *buff)
 
         tempJSON.setObject(tempObj); //Добовляем новый обьект из строки данных
 
-        // если файла нет создаем его иначе пишем в конец файла
-        if(!log_file->exists()){
-            isok = log_file->open(QIODevice::WriteOnly);
+        if(buffCount == currentBufferCount){
+            //записываем буфер в файл
+            // если файла нет создаем его иначе пишем в конец файла
+            if(!log_file->exists()){
+                isok = log_file->open(QIODevice::WriteOnly);
+                len = log_file->write(bufferData.toUtf8 ()); // пишем его в файл
+            }else {
+                isok = log_file->open(QIODevice::Append | QIODevice::Text); //QIODevice::ReadWrite |
+                if(log_file->size ()<= 1){
+                     len = log_file->write(bufferData.toUtf8 ()); // пишем его в файл
+                }else{
+                    len = log_file->write(",\n"); // пишем!
+                    len = log_file->write(bufferData.toUtf8 ()); // пишем его в файл
+                }
+            }
+//            len = log_file->write(bufferData.toUtf8 ()); // пишем его в файл
+            bufferData.clear ();
+            currentBufferCount = 0;
+            log_file->close();
 
         }else {
-            isok = log_file->open(QIODevice::Append | QIODevice::Text); //QIODevice::ReadWrite |
-            if(log_file->pos () <= 1){
-
-            }else{
-                len = log_file->write(",\n"); // пишем его в файл
+            //буфферезируем данные
+            if(currentBufferCount == 0){
+                bufferData +=   tempJSON .toJson(QJsonDocument::Compact);
+            }else {
+                bufferData +=  ",\n"+ tempJSON .toJson(QJsonDocument::Compact);
             }
+            currentBufferCount++;
         }
-
-        len = log_file->write(tempJSON .toJson(QJsonDocument::Compact)); // пишем его в файл
 
         curentPoint[strID] = tempObj; // в файл пишем в качестве ключа id для экономии места на диске
         emitJSON[sensorName] = tempObj; // в виртуальный файл отпровляем  имя в качестве ключа
         emit setPoint(emitJSON, nameFile);
-        log_file->close();
 
 
     }else {

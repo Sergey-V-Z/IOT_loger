@@ -134,6 +134,6 @@ QStringList CurrentPoint::getFilesList(QString mask)
     QFileInfo configFile (settingSensors->value("logFile").toString());
     path = QFileInfo(configFile.absolutePath(),path).absoluteFilePath();
     mDir.setPath(path);
-    return  mDir.entryList(QStringList()<< mask);
+    return  mDir.entryList(QStringList()<< mask,QDir::NoFilter,QDir::Time);
 }
 

@@ -8,14 +8,14 @@ window.onload = function () {
 
     // сосздание и заполнение таблицы
     function setTable(objPoint, domElement) {
-         // таблица для обекта
-        let table = document.createElement("table"),
-        tbody = document.createElement('tbody');
-        table.className = "sensor";
 
         for (const key in objPoint) {
+            // таблица для обекта
+            let table = document.createElement("table"),
+                tbody = document.createElement('tbody');
+                table.className = "sensor";
             if (objPoint.hasOwnProperty(key)) {
-               
+
                 table.innerHTML = "<caption><p>" + key + "</p></caption>";
                 // выносиб отдельный обект для удобства
                 let sensObj = objPoint[key];
@@ -30,11 +30,11 @@ window.onload = function () {
                         let rowTable = document.createElement('tr'),
                             cell1 = document.createElement('td'),
                             cell2 = document.createElement('td');
-                            cell1.innerHTML = key2;
-                            cell2.innerHTML = sensObj[key2];
-                            rowTable.appendChild(cell1);
-                            rowTable.appendChild(cell2);
-                            tbody.appendChild(rowTable);
+                        cell1.innerHTML = key2;
+                        cell2.innerHTML = sensObj[key2];
+                        rowTable.appendChild(cell1);
+                        rowTable.appendChild(cell2);
+                        tbody.appendChild(rowTable);
                     }
                 }
                 table.appendChild(tbody);

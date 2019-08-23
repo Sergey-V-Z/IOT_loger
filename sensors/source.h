@@ -43,6 +43,11 @@ public:
 private:
     bool NeedUpdateSet = false;
     bool Connect = false;
+    //настройки датчиков
+    int buffCount = 0;
+    int currentBufferCount = 0;
+    //буфер накопления данных от датчиков
+    QString bufferData;
 
     QString LogFileName;
     QString ID;

@@ -7,37 +7,22 @@ TemplateCache* RequestMapper::templateCache=nullptr;
 Logger* RequestMapper::logger=nullptr;
 CurrentPoint *RequestMapper::currentPoint=nullptr;
 settingsControl *RequestMapper::settingsController=nullptr;
- QMap<QString, QByteArray> *RequestMapper::loginUsers=nullptr;
- QMap<QString, QByteArray> *RequestMapper::loginRoot=nullptr;
 
-RequestMapper::RequestMapper(QSettings *settings, QSettings *loginBase, QObject* parent)
+RequestMapper::RequestMapper(QSettings *settings, QSettings *loginSet, QObject* parent)
     : HttpRequestHandler(parent) {
     // Выделение памяти
+     loginController = new LoginController (loginSet, parent);
     RequestMapper::currentPoint = new CurrentPoint (settings, parent); // глобальный объект класс текушей точки(для получения свежих данных)
     RequestMapper::settingsController = new settingsControl (parent); // Контроллер приема настроек
     eventController = new sseCtrl(parent);
-    RequestMapper::loginUsers = new QMap<QString, QByteArray> ();
-    RequestMapper::loginRoot = new QMap<QString, QByteArray> ();
+//    RequestMapper::userStor = new QMap<QString, QByteArray> ();
 
-    loginBase->beginGroup ("users");
-    QStringList keysLogin = loginBase->allKeys ();
-    for (int i = 0; i < keysLogin.size (); ++i) {
-         RequestMapper::loginUsers->insert (keysLogin[i], loginBase->value (keysLogin[i]).toByteArray ());
-    }
-    keysLogin.clear ();
-    loginBase->endGroup ();
-    loginBase->beginGroup ("rootUser");
-    keysLogin = loginBase->allKeys ();
-    for (int i = 0; i < keysLogin.size (); ++i) {
-         RequestMapper::loginRoot->insert (keysLogin[i], loginBase->value (keysLogin[i]).toByteArray ());
-    }
-
+    //loginController.setLoginBase(loginSet);
 }
 
 RequestMapper::~RequestMapper()
 {
-    delete loginUsers;
-    delete loginRoot;
+//    delete userStor;
 }
 
 void RequestMapper::service(HttpRequest& request, HttpResponse& response) {
@@ -50,9 +35,10 @@ void RequestMapper::service(HttpRequest& request, HttpResponse& response) {
 
     //Перенаправление на login
     QByteArray sessionId=sessionStore->getSessionId(request,response);
-    if (sessionId.isEmpty() && path!="/login") {
+    QString referrer = request.getHeader ("referer");
+    if ((sessionId.isEmpty() || username.isEmpty ()) &&  path != "/login.html" &&  !referrer.contains ("/login.html")) {
         qDebug("RequestMapper: redirect to login page");
-        response.redirect("/login");
+        response.redirect("/login.html");
         return;
     }
 
@@ -63,8 +49,8 @@ void RequestMapper::service(HttpRequest& request, HttpResponse& response) {
     else if (path=="/list") {
         listDataController.service(request, response);
     }
-    else if (path=="/login") {
-        loginController.service(request, response);
+    else if (path=="/login.html") {
+        loginController->service(request, response);
     }
     else if (path=="/cookie") {
         cookieTestController.service(request, response);

@@ -30,13 +30,12 @@ public:
     static Logger* logger;
     static CurrentPoint *currentPoint;
     static settingsControl *settingsController;
-    static QMap<QString, QByteArray> *loginUsers;
-    static QMap<QString, QByteArray> *loginRoot;
     sseCtrl *eventController;
 
 private:
+    bool logInUser;
     ListDataController listDataController;
-    LoginController loginController;
+    LoginController *loginController;
     CookieTestController cookieTestController;
     DataTemplateController dataTemplateController;
 };
