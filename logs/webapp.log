@@ -1,640 +1,822 @@
-23.08.2019 13:48:06.674 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): read input
-23.08.2019 13:48:06.674 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: read request
-23.08.2019 13:48:06.674 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: from ::1: GET /menu/settings HTTP/1.1
-23.08.2019 13:48:06.674 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header host: localhost:8080
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header connection: keep-alive
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header upgrade-insecure-requests: 1
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header dnt: 1
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/index
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header cookie: sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: headers completed
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: expect no body
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: extract and decode request parameters
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: extract cookies
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: found cookie sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): received request
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} RequestMapper: path=/menu/settings
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:admin HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:admin HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=4
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:admin HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:admin language=ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying cached menu-ru_RU
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying cached menu-ru
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying cached settings-ru_RU
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settings-ru_RU.html
-23.08.2019 13:48:06.675 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying cached settings-ru
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settings-ru.html
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying cached settings-en_US
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settings-en_US.html
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying cached settings-en
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settings-en.html
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying cached settings
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settings.html
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying cached settingsHead-ru_RU
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settingsHead-ru_RU.html
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying cached settingsHead-ru
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settingsHead-ru.html
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying cached settingsHead-en_US
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settingsHead-en_US.html
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying cached settingsHead-en
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settingsHead-en.html
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying cached settingsHead
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settingsHead.html
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:admin RequestMapper: finished request
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:48:06.676 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): finished request
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): read input
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: read request
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: from ::1: GET /css/settings.css HTTP/1.1
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header host: localhost:8080
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header connection: keep-alive
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header dnt: 1
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept: text/css,*/*;q=0.1
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/settings
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header cookie: sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: headers completed
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: expect no body
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: extract and decode request parameters
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: extract cookies
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: found cookie sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): received request
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} RequestMapper: path=/css/settings.css
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:48:06.755 0 DEBUG    0x7fa0ed713700 User:admin StaticFileController: Cache miss for /css/settings.css
-23.08.2019 13:48:06.756 0 DEBUG    0x7fa0ed713700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/css/settings.css
-23.08.2019 13:48:06.756 0 DEBUG    0x7fa0ed713700 User:admin RequestMapper: finished request
-23.08.2019 13:48:06.756 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:48:06.756 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): finished request
-23.08.2019 13:48:06.757 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read input
-23.08.2019 13:48:06.757 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: read request
-23.08.2019 13:48:06.757 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: from ::1: GET /js/settings.js HTTP/1.1
-23.08.2019 13:48:06.757 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header host: localhost:8080
-23.08.2019 13:48:06.757 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header connection: keep-alive
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header dnt: 1
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept: */*
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/settings
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cookie: sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: headers completed
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: expect no body
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract and decode request parameters
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract cookies
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: found cookie sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): received request
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} RequestMapper: path=/js/settings.js
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: Cache miss for /js/settings.js
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/js/settings.js
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:admin RequestMapper: finished request
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:48:06.758 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): finished request
-23.08.2019 13:48:06.853 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read input
-23.08.2019 13:48:06.853 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: read request
-23.08.2019 13:48:06.853 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: from ::1: POST /login.html HTTP/1.1
-23.08.2019 13:48:06.853 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header host: localhost:8080
-23.08.2019 13:48:06.853 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header connection: keep-alive
-23.08.2019 13:48:06.853 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header content-length: 13
-23.08.2019 13:48:06.853 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header origin: http://localhost:8080
-23.08.2019 13:48:06.853 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
-23.08.2019 13:48:06.853 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header dnt: 1
-23.08.2019 13:48:06.853 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header content-type: application/x-www-form-urlencoded
-23.08.2019 13:48:06.853 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept: */*
-23.08.2019 13:48:06.853 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/settings
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cookie: sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: headers completed
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: expect 13 bytes body
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: receive body
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract and decode request parameters
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract cookies
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: found cookie sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): received request
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:{currentUser} RequestMapper: path=/login.html
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=4
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:admin username=
-23.08.2019 13:48:06.854 0 DEBUG    0x7fa0ef228700 User:admin password=
-23.08.2019 13:48:06.854 1 WARNING  0x7fa0ef228700 User:admin QSqlDatabasePrivate::addDatabase: duplicate connection name 'qt_sql_default_connection', old connection removed.
-23.08.2019 13:48:06.855 1 WARNING  0x7fa0ef228700 User:admin QSqlQuery::value: not positioned on a valid record
-23.08.2019 13:48:06.855 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:48:06.855 0 DEBUG    0x7fa0ef228700 User:admin RequestMapper: finished request
-23.08.2019 13:48:06.855 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:48:06.855 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): finished request
-23.08.2019 13:48:06.856 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): read input
-23.08.2019 13:48:06.856 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: read request
-23.08.2019 13:48:06.856 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: from ::1: GET /vf/allFile HTTP/1.1
-23.08.2019 13:48:06.856 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header host: localhost:8080
-23.08.2019 13:48:06.856 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header connection: keep-alive
-23.08.2019 13:48:06.856 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
-23.08.2019 13:48:06.856 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header dnt: 1
-23.08.2019 13:48:06.856 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept: */*
-23.08.2019 13:48:06.856 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/settings
-23.08.2019 13:48:06.856 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
-23.08.2019 13:48:06.856 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:48:06.856 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header cookie: sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:48:06.856 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: headers completed
-23.08.2019 13:48:06.856 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: expect no body
-23.08.2019 13:48:06.856 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: extract and decode request parameters
-23.08.2019 13:48:06.857 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: extract cookies
-23.08.2019 13:48:06.857 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: found cookie sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:48:06.857 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): received request
-23.08.2019 13:48:06.857 0 DEBUG    0x7fa0ed713700 User:{currentUser} RequestMapper: path=/vf/allFile
-23.08.2019 13:48:06.857 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:48:06.857 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:48:06.857 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:48:06.869 0 DEBUG    0x7fa0ed713700 User:admin RequestMapper: finished request
-23.08.2019 13:48:06.869 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:48:06.869 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): finished request
-23.08.2019 13:49:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:49:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:49:04.427 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpConnectionHandler (0x559ad0770690): read timeout occured
-23.08.2019 13:49:04.427 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpConnectionHandler (0x559ad0770690): disconnected
-23.08.2019 13:49:04.442 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): read timeout occured
-23.08.2019 13:49:04.442 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): disconnected
-23.08.2019 13:49:06.421 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): read timeout occured
-23.08.2019 13:49:06.421 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): disconnected
-23.08.2019 13:49:06.425 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read timeout occured
-23.08.2019 13:49:06.425 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): disconnected
-23.08.2019 13:50:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:50:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:51:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:51:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:52:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:52:09.344 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpListener: New connection
-23.08.2019 13:52:09.344 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpListener: New connection
-23.08.2019 13:52:09.344 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): handle new connection
-23.08.2019 13:52:09.344 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpConnectionHandler (0x559ad0770690): handle new connection
-23.08.2019 13:52:09.348 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read input
-23.08.2019 13:52:09.348 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: read request
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: from ::1: GET /menu/charts HTTP/1.1
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header host: localhost:8080
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header connection: keep-alive
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header upgrade-insecure-requests: 1
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header dnt: 1
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/settings
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cookie: sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: headers completed
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: expect no body
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract and decode request parameters
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract cookies
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: found cookie sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): received request
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} RequestMapper: path=/menu/charts
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=4
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin language=ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached menu-ru_RU
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/menu-ru_RU.html
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached menu-ru
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/menu-ru.html
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached charts-ru_RU
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/charts-ru_RU.html
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached charts-ru
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/charts-ru.html
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached charts-en_US
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/charts-en_US.html
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached charts-en
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/charts-en.html
-23.08.2019 13:52:09.349 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached charts
-23.08.2019 13:52:09.350 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/charts.html
-23.08.2019 13:52:09.350 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached chartsHead-ru_RU
-23.08.2019 13:52:09.350 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/chartsHead-ru_RU.html
-23.08.2019 13:52:09.350 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached chartsHead-ru
-23.08.2019 13:52:09.350 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/chartsHead-ru.html
-23.08.2019 13:52:09.350 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached chartsHead-en_US
-23.08.2019 13:52:09.350 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/chartsHead-en_US.html
-23.08.2019 13:52:09.350 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached chartsHead-en
-23.08.2019 13:52:09.350 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/chartsHead-en.html
-23.08.2019 13:52:09.350 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached chartsHead
-23.08.2019 13:52:09.350 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/chartsHead.html
-23.08.2019 13:52:09.350 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.350 0 DEBUG    0x7fa0ef228700 User:admin RequestMapper: finished request
-23.08.2019 13:52:09.350 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:52:09.350 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): finished request
-23.08.2019 13:52:09.413 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read input
-23.08.2019 13:52:09.413 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: read request
-23.08.2019 13:52:09.413 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: from ::1: GET /css/menu.css HTTP/1.1
-23.08.2019 13:52:09.413 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header host: localhost:8080
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header connection: keep-alive
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header dnt: 1
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept: text/css,*/*;q=0.1
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cookie: sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: headers completed
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: expect no body
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract and decode request parameters
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract cookies
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: found cookie sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): received request
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} RequestMapper: path=/css/menu.css
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: Cache miss for /css/menu.css
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/css/menu.css
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:admin RequestMapper: finished request
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:52:09.414 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): finished request
-23.08.2019 13:52:09.416 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpListener: New connection
-23.08.2019 13:52:09.416 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): handle new connection
-23.08.2019 13:52:09.417 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpListener: New connection
-23.08.2019 13:52:09.417 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): handle new connection
-23.08.2019 13:52:09.417 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpListener: New connection
-23.08.2019 13:52:09.418 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpConnectionHandler (0x559ad0794b80): thread started
-23.08.2019 13:52:09.418 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpConnectionHandler (0x559ad0794b80): constructed
-23.08.2019 13:52:09.418 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpConnectionHandler (0x559ad0794b80): handle new connection
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpConnectionHandler (0x559ad0770690): read input
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: read request
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: from ::1: GET /css/charts.css HTTP/1.1
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header host: localhost:8080
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header connection: keep-alive
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header dnt: 1
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header accept: text/css,*/*;q=0.1
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header cookie: sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: headers completed
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: expect no body
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: extract and decode request parameters
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: extract cookies
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: found cookie sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpConnectionHandler (0x559ad0770690): received request
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} RequestMapper: path=/css/charts.css
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:admin StaticFileController: Cache miss for /css/charts.css
-23.08.2019 13:52:09.432 0 DEBUG    0x7fa0eea27700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/css/charts.css
-23.08.2019 13:52:09.433 0 DEBUG    0x7fa0eea27700 User:admin RequestMapper: finished request
-23.08.2019 13:52:09.433 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:52:09.433 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpConnectionHandler (0x559ad0770690): finished request
-23.08.2019 13:52:09.434 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpListener: New connection
-23.08.2019 13:52:09.434 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): read input
-23.08.2019 13:52:09.434 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: read request
-23.08.2019 13:52:09.434 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: from ::1: GET /js/menu.js HTTP/1.1
-23.08.2019 13:52:09.434 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header host: localhost:8080
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header connection: keep-alive
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpConnectionHandler (0x559ad0790880): thread started
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): read input
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: read request
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: from ::1: GET /js/charts/core.js HTTP/1.1
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header host: localhost:8080
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header connection: keep-alive
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header dnt: 1
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept: */*
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header cookie: sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: headers completed
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: expect no body
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: extract and decode request parameters
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: extract cookies
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: found cookie sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): received request
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} RequestMapper: path=/js/charts/core.js
-23.08.2019 13:52:09.435 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.436 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:52:09.436 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.436 0 DEBUG    0x7fa0ed713700 User:admin StaticFileController: Cache miss for /js/charts/core.js
-23.08.2019 13:52:09.436 0 DEBUG    0x7fa0ed713700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/js/charts/core.js
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header dnt: 1
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept: */*
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header cookie: sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: headers completed
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: expect no body
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: extract and decode request parameters
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: extract cookies
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: found cookie sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): received request
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} RequestMapper: path=/js/menu.js
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=4
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:52:09.437 0 DEBUG    0x7fa0ee226700 User:admin StaticFileController: Cache miss for /js/menu.js
-23.08.2019 13:52:09.438 0 DEBUG    0x7fa0ee226700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/js/menu.js
-23.08.2019 13:52:09.438 0 DEBUG    0x7fa0ee226700 User:admin RequestMapper: finished request
-23.08.2019 13:52:09.438 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.438 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): finished request
-23.08.2019 13:52:09.438 0 DEBUG    0x7fa0ed713700 User:admin RequestMapper: finished request
-23.08.2019 13:52:09.438 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:52:09.438 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): finished request
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpConnectionHandler (0x559ad0790880): constructed
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0790880): handle new connection
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0790880): read input
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: read request
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: from ::1: GET /js/charts/themes/animated.js HTTP/1.1
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header host: localhost:8080
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header connection: keep-alive
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header dnt: 1
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header accept: */*
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header cookie: sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: headers completed
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: expect no body
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: extract and decode request parameters
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: extract cookies
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: found cookie sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0790880): received request
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} RequestMapper: path=/js/charts/themes/animated.js
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:52:09.439 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.440 0 DEBUG    0x7fa0d7fff700 User:admin StaticFileController: Cache miss for /js/charts/themes/animated.js
-23.08.2019 13:52:09.440 0 DEBUG    0x7fa0d7fff700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/js/charts/themes/animated.js
-23.08.2019 13:52:09.440 0 DEBUG    0x7fa0d7fff700 User:admin RequestMapper: finished request
-23.08.2019 13:52:09.440 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:52:09.440 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0790880): finished request
-23.08.2019 13:52:09.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read input
-23.08.2019 13:52:09.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: read request
-23.08.2019 13:52:09.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: from ::1: GET /js/charts.js HTTP/1.1
-23.08.2019 13:52:09.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header host: localhost:8080
-23.08.2019 13:52:09.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header connection: keep-alive
-23.08.2019 13:52:09.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
-23.08.2019 13:52:09.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header dnt: 1
-23.08.2019 13:52:09.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept: */*
-23.08.2019 13:52:09.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cookie: sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: headers completed
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: expect no body
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract and decode request parameters
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract cookies
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: found cookie sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): received request
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} RequestMapper: path=/js/charts.js
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: Cache miss for /js/charts.js
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/js/charts.js
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:admin RequestMapper: finished request
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): finished request
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpConnectionHandler (0x559ad0794b80): read input
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpRequest: read request
-23.08.2019 13:52:09.445 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpRequest: from ::1: GET /js/charts/charts.js HTTP/1.1
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpRequest: received header host: localhost:8080
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpRequest: received header connection: keep-alive
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpRequest: received header dnt: 1
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpRequest: received header accept: */*
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpRequest: received header cookie: sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpRequest: headers completed
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpRequest: expect no body
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpRequest: extract and decode request parameters
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpRequest: extract cookies
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpRequest: found cookie sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpConnectionHandler (0x559ad0794b80): received request
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} RequestMapper: path=/js/charts/charts.js
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:admin StaticFileController: Cache miss for /js/charts/charts.js
-23.08.2019 13:52:09.446 0 DEBUG    0x7fa0ecf12700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/js/charts/charts.js
-23.08.2019 13:52:09.447 0 DEBUG    0x7fa0ecf12700 User:admin RequestMapper: finished request
-23.08.2019 13:52:09.447 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:52:09.447 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpConnectionHandler (0x559ad0794b80): finished request
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read input
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: read request
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: from ::1: GET /vf/listFile HTTP/1.1
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header host: localhost:8080
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header connection: keep-alive
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header dnt: 1
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept: */*
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cookie: sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: headers completed
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: expect no body
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract and decode request parameters
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract cookies
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: found cookie sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): received request
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} RequestMapper: path=/vf/listFile
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:52:09.649 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.650 0 DEBUG    0x7fa0ef228700 User:admin RequestMapper: finished request
-23.08.2019 13:52:09.650 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:52:09.650 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): finished request
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read input
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: read request
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: from ::1: GET /LogSourses/23.08.19_id=2.dat HTTP/1.1
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header host: localhost:8080
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header connection: keep-alive
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header dnt: 1
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept: */*
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cookie: sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: headers completed
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: expect no body
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract and decode request parameters
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract cookies
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: found cookie sessionid={aefeb0e6-9c33-4a20-a1a8-bc0626bcadca}
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): received request
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} RequestMapper: path=/LogSourses/23.08.19_id=2.dat
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=3
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: Cache miss for /LogSourses/23.08.19_id=2.dat
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/LogSourses/23.08.19_id=2.dat
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:admin RequestMapper: finished request
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:52:09.681 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): finished request
-23.08.2019 13:53:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:53:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:53:09.435 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpConnectionHandler (0x559ad0770690): read timeout occured
-23.08.2019 13:53:09.435 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpConnectionHandler (0x559ad0770690): disconnected
-23.08.2019 13:53:09.441 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): read timeout occured
-23.08.2019 13:53:09.441 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpConnectionHandler (0x559ad0794b80): read timeout occured
-23.08.2019 13:53:09.441 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): read timeout occured
-23.08.2019 13:53:09.441 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpConnectionHandler (0x559ad0794b80): disconnected
-23.08.2019 13:53:09.441 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): disconnected
-23.08.2019 13:53:09.441 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): disconnected
-23.08.2019 13:53:09.441 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read timeout occured
-23.08.2019 13:53:09.441 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0790880): read timeout occured
-23.08.2019 13:53:09.441 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): disconnected
-23.08.2019 13:53:09.441 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0790880): disconnected
-23.08.2019 13:54:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:54:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:54:00.382 0 DEBUG    0x7fa0ecf12700 User:{currentUser} HttpConnectionHandler (0x559ad0794b80): thread stopped
-23.08.2019 13:54:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpConnectionHandler (0x559ad0794b80): destroyed
-23.08.2019 13:54:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpConnectionHandlerPool: Removed connection handler (0x559ad0794b80), pool size is now 5
-23.08.2019 13:55:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:55:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:55:00.382 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0790880): thread stopped
-23.08.2019 13:55:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpConnectionHandler (0x559ad0790880): destroyed
-23.08.2019 13:55:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpConnectionHandlerPool: Removed connection handler (0x559ad0790880), pool size is now 4
-23.08.2019 13:56:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:56:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:57:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:57:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:58:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:58:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 13:59:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 13:59:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:00:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:00:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:01:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:01:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:02:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:02:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:03:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:03:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:04:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:04:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:05:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:05:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:06:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:06:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:07:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:07:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:08:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:08:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:09:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:09:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:10:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:10:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:11:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:11:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:12:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:12:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:13:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:13:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:14:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:14:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:15:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:15:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:16:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:16:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:17:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:17:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:18:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:18:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:19:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:19:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:20:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:20:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:21:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:21:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:22:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:22:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:23:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:23:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:24:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:24:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:25:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:25:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:26:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:26:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:27:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:27:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:28:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:28:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:29:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:29:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:30:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:30:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:31:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:31:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:32:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:32:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:33:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:33:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:34:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:34:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:35:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:35:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:36:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:36:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:37:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:37:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:38:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:38:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:39:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:39:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:40:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:40:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:41:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:41:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:42:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:42:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:43:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:43:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:44:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:44:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:45:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:45:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:46:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:46:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:47:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:47:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:48:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:48:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:49:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:49:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:50:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:50:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:51:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:51:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:52:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:52:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:53:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=2
-23.08.2019 14:53:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSessionStore: session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} expired
-23.08.2019 14:53:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=1
-23.08.2019 14:53:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {aefeb0e6-9c33-4a20-a1a8-bc0626bcadca} refCount=0
-23.08.2019 14:53:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: deleting data
+23.08.2019 19:21:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:21:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:22:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:22:49.190 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpListener: New connection
+23.08.2019 19:22:49.191 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): handle new connection
+23.08.2019 19:22:49.191 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpListener: New connection
+23.08.2019 19:22:49.191 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpConnectionHandler (0x559ad0770690): handle new connection
+23.08.2019 19:22:49.196 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read input
+23.08.2019 19:22:49.196 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:22:49.196 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: from ::1: GET /menu/settings HTTP/1.1
+23.08.2019 19:22:49.196 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:22:49.196 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:22:49.196 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cache-control: max-age=0
+23.08.2019 19:22:49.196 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header upgrade-insecure-requests: 1
+23.08.2019 19:22:49.196 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/index
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): received request
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:{currentUser} RequestMapper: path=/menu/settings
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=4
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:22:49.197 0 DEBUG    0x7fa0ef228700 User:admin language=ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached menu-ru_RU
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/menu-ru_RU.html
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached menu-ru
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/menu-ru.html
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settings-ru_RU
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settings-ru_RU.html
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settings-ru
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settings-ru.html
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settings-en_US
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settings-en_US.html
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settings-en
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settings-en.html
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settings
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settings.html
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settingsHead-ru_RU
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settingsHead-ru_RU.html
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settingsHead-ru
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settingsHead-ru.html
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settingsHead-en_US
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settingsHead-en_US.html
+23.08.2019 19:22:49.198 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settingsHead-en
+23.08.2019 19:22:49.199 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settingsHead-en.html
+23.08.2019 19:22:49.199 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settingsHead
+23.08.2019 19:22:49.199 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/settingsHead.html
+23.08.2019 19:22:49.199 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.199 0 DEBUG    0x7fa0ef228700 User:admin RequestMapper: finished request
+23.08.2019 19:22:49.199 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:22:49.199 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): finished request
+23.08.2019 19:22:49.272 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read input
+23.08.2019 19:22:49.272 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:22:49.272 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: from ::1: GET /css/menu.css HTTP/1.1
+23.08.2019 19:22:49.272 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:22:49.272 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:22:49.272 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:22:49.272 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:22:49.272 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept: text/css,*/*;q=0.1
+23.08.2019 19:22:49.272 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/settings
+23.08.2019 19:22:49.272 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:22:49.272 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:22:49.272 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:22:49.272 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:22:49.272 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:22:49.272 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:22:49.272 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): received request
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0ef228700 User:{currentUser} RequestMapper: path=/css/menu.css
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: Cache miss for /css/menu.css
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/css/menu.css
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0ef228700 User:admin RequestMapper: finished request
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): finished request
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpConnectionHandler (0x559ad0770690): read input
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: from ::1: GET /css/settings.css HTTP/1.1
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:22:49.273 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header accept: text/css,*/*;q=0.1
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/settings
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpConnectionHandler (0x559ad0770690): received request
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} RequestMapper: path=/css/settings.css
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:admin StaticFileController: Cache miss for /css/settings.css
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/css/settings.css
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:admin RequestMapper: finished request
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:22:49.274 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpConnectionHandler (0x559ad0770690): finished request
+23.08.2019 19:22:49.275 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpListener: New connection
+23.08.2019 19:22:49.275 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): handle new connection
+23.08.2019 19:22:49.275 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpListener: New connection
+23.08.2019 19:22:49.275 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): read input
+23.08.2019 19:22:49.275 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:22:49.275 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): handle new connection
+23.08.2019 19:22:49.275 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: from ::1: GET /js/hash/sha256.js HTTP/1.1
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept: */*
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/settings
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): received request
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} RequestMapper: path=/js/hash/sha256.js
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:admin StaticFileController: Cache miss for /js/hash/sha256.js
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/js/hash/sha256.js
+23.08.2019 19:22:49.276 0 DEBUG    0x7fa0ee226700 User:admin RequestMapper: finished request
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): finished request
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): read input
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: from ::1: GET /js/menu.js HTTP/1.1
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept: */*
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/settings
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): received request
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} RequestMapper: path=/js/menu.js
+23.08.2019 19:22:49.277 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.278 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:22:49.278 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.278 0 DEBUG    0x7fa0ed713700 User:admin StaticFileController: Cache miss for /js/menu.js
+23.08.2019 19:22:49.278 0 DEBUG    0x7fa0ed713700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/js/menu.js
+23.08.2019 19:22:49.278 0 DEBUG    0x7fa0ed713700 User:admin RequestMapper: finished request
+23.08.2019 19:22:49.278 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:22:49.278 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): finished request
+23.08.2019 19:22:49.303 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpListener: New connection
+23.08.2019 19:22:49.303 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpConnectionHandler (0x559ad0792900): thread started
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpConnectionHandler (0x559ad0792900): constructed
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0792900): handle new connection
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0792900): read input
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: from ::1: GET /js/settings.js HTTP/1.1
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header accept: */*
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/settings
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0792900): received request
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} RequestMapper: path=/js/settings.js
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:22:49.304 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.305 0 DEBUG    0x7fa0d7fff700 User:admin StaticFileController: Cache miss for /js/settings.js
+23.08.2019 19:22:49.305 0 DEBUG    0x7fa0d7fff700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/js/settings.js
+23.08.2019 19:22:49.305 0 DEBUG    0x7fa0d7fff700 User:admin RequestMapper: finished request
+23.08.2019 19:22:49.305 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:22:49.305 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0792900): finished request
+23.08.2019 19:22:49.453 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0792900): read input
+23.08.2019 19:22:49.453 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:22:49.453 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: from ::1: POST /login.html HTTP/1.1
+23.08.2019 19:22:49.453 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header content-length: 13
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header origin: http://localhost:8080
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header content-type: application/x-www-form-urlencoded
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header accept: */*
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/settings
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: expect 13 bytes body
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: receive body
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0792900): received request
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} RequestMapper: path=/login.html
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:admin HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:22:49.454 0 DEBUG    0x7fa0d7fff700 User:admin HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=4
+23.08.2019 19:22:49.455 0 DEBUG    0x7fa0d7fff700 User:admin HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:22:49.455 0 DEBUG    0x7fa0d7fff700 User:admin username=
+23.08.2019 19:22:49.455 0 DEBUG    0x7fa0d7fff700 User:admin password=
+23.08.2019 19:22:49.455 1 WARNING  0x7fa0d7fff700 User:admin QSqlDatabasePrivate::addDatabase: duplicate connection name 'qt_sql_default_connection', old connection removed.
+23.08.2019 19:22:49.455 1 WARNING  0x7fa0d7fff700 User:admin QSqlQuery::value: not positioned on a valid record
+23.08.2019 19:22:49.455 0 DEBUG    0x7fa0d7fff700 User:admin HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.455 0 DEBUG    0x7fa0d7fff700 User:admin RequestMapper: finished request
+23.08.2019 19:22:49.455 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:22:49.455 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0792900): finished request
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): read input
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: from ::1: GET /vf/allFile HTTP/1.1
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept: */*
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/settings
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): received request
+23.08.2019 19:22:49.456 0 DEBUG    0x7fa0ee226700 User:{currentUser} RequestMapper: path=/vf/allFile
+23.08.2019 19:22:49.457 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.457 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:22:49.457 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:22:49.474 0 DEBUG    0x7fa0ee226700 User:admin RequestMapper: finished request
+23.08.2019 19:22:49.474 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:22:49.474 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): finished request
+23.08.2019 19:23:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:23:14.809 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): read input
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: from ::1: GET /menu/charts HTTP/1.1
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header upgrade-insecure-requests: 1
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/settings
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): received request
+23.08.2019 19:23:14.810 0 DEBUG    0x7fa0ee226700 User:{currentUser} RequestMapper: path=/menu/charts
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:admin HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:admin HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=4
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:admin HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:admin language=ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying cached menu-ru_RU
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying cached menu-ru
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying cached charts-ru_RU
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/charts-ru_RU.html
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying cached charts-ru
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/charts-ru.html
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying cached charts-en_US
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/charts-en_US.html
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying cached charts-en
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/charts-en.html
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying cached charts
+23.08.2019 19:23:14.811 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/charts.html
+23.08.2019 19:23:14.821 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying cached chartsHead-ru_RU
+23.08.2019 19:23:14.821 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/chartsHead-ru_RU.html
+23.08.2019 19:23:14.821 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying cached chartsHead-ru
+23.08.2019 19:23:14.821 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/chartsHead-ru.html
+23.08.2019 19:23:14.821 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying cached chartsHead-en_US
+23.08.2019 19:23:14.821 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/chartsHead-en_US.html
+23.08.2019 19:23:14.821 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying cached chartsHead-en
+23.08.2019 19:23:14.821 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/chartsHead-en.html
+23.08.2019 19:23:14.821 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying cached chartsHead
+23.08.2019 19:23:14.821 0 DEBUG    0x7fa0ee226700 User:admin TemplateCache: trying file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/menu/chartsHead.html
+23.08.2019 19:23:14.836 0 DEBUG    0x7fa0ee226700 User:admin HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:14.836 0 DEBUG    0x7fa0ee226700 User:admin RequestMapper: finished request
+23.08.2019 19:23:14.836 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:23:14.837 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): finished request
+23.08.2019 19:23:14.906 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): read input
+23.08.2019 19:23:14.906 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:23:14.906 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: from ::1: GET /js/charts/core.js HTTP/1.1
+23.08.2019 19:23:14.906 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:23:14.906 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:23:14.906 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:23:14.906 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:23:14.906 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept: */*
+23.08.2019 19:23:14.906 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
+23.08.2019 19:23:14.906 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:23:14.906 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:23:14.906 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:14.906 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:23:14.907 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:23:14.907 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:23:14.907 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:23:14.907 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:14.907 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): received request
+23.08.2019 19:23:14.907 0 DEBUG    0x7fa0ee226700 User:{currentUser} RequestMapper: path=/js/charts/core.js
+23.08.2019 19:23:14.907 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:14.907 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:14.907 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:14.907 0 DEBUG    0x7fa0ee226700 User:admin StaticFileController: Cache miss for /js/charts/core.js
+23.08.2019 19:23:14.907 0 DEBUG    0x7fa0ee226700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/js/charts/core.js
+23.08.2019 19:23:14.938 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0792900): read input
+23.08.2019 19:23:14.938 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:23:14.938 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: from ::1: GET /js/charts/charts.js HTTP/1.1
+23.08.2019 19:23:14.938 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:23:14.938 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:23:14.938 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:23:14.938 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:23:14.938 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header accept: */*
+23.08.2019 19:23:14.938 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
+23.08.2019 19:23:14.939 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:23:14.939 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:23:14.939 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:14.939 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:23:14.939 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:23:14.939 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:23:14.939 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:23:14.939 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:14.939 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0792900): received request
+23.08.2019 19:23:14.939 0 DEBUG    0x7fa0d7fff700 User:{currentUser} RequestMapper: path=/js/charts/charts.js
+23.08.2019 19:23:14.939 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:14.939 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=4
+23.08.2019 19:23:14.939 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:14.939 0 DEBUG    0x7fa0d7fff700 User:admin StaticFileController: Cache miss for /js/charts/charts.js
+23.08.2019 19:23:14.939 0 DEBUG    0x7fa0d7fff700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/js/charts/charts.js
+23.08.2019 19:23:14.949 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): read input
+23.08.2019 19:23:14.949 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:23:14.949 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: from ::1: GET /js/charts/themes/animated.js HTTP/1.1
+23.08.2019 19:23:14.949 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:23:14.949 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept: */*
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): received request
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} RequestMapper: path=/js/charts/themes/animated.js
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=4
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=5
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=4
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:admin StaticFileController: Cache miss for /js/charts/themes/animated.js
+23.08.2019 19:23:14.950 0 DEBUG    0x7fa0ed713700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/js/charts/themes/animated.js
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpConnectionHandler (0x559ad0770690): read input
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: from ::1: GET /css/charts.css HTTP/1.1
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header accept: text/css,*/*;q=0.1
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpConnectionHandler (0x559ad0770690): received request
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} RequestMapper: path=/css/charts.css
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=5
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=6
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=5
+23.08.2019 19:23:14.975 0 DEBUG    0x7fa0eea27700 User:admin StaticFileController: Cache miss for /css/charts.css
+23.08.2019 19:23:14.976 0 DEBUG    0x7fa0eea27700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/css/charts.css
+23.08.2019 19:23:14.987 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read input
+23.08.2019 19:23:14.987 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: from ::1: GET /js/charts.js HTTP/1.1
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept: */*
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): received request
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} RequestMapper: path=/js/charts.js
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=6
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=7
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=6
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: Cache miss for /js/charts.js
+23.08.2019 19:23:14.988 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/js/charts.js
+23.08.2019 19:23:15.019 0 DEBUG    0x7fa0d7fff700 User:admin RequestMapper: finished request
+23.08.2019 19:23:15.019 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=5
+23.08.2019 19:23:15.019 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0792900): finished request
+23.08.2019 19:23:15.035 0 DEBUG    0x7fa0ed713700 User:admin RequestMapper: finished request
+23.08.2019 19:23:15.035 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=4
+23.08.2019 19:23:15.036 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): finished request
+23.08.2019 19:23:15.081 0 DEBUG    0x7fa0ef228700 User:admin RequestMapper: finished request
+23.08.2019 19:23:15.081 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:15.082 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): finished request
+23.08.2019 19:23:15.091 0 DEBUG    0x7fa0eea27700 User:admin RequestMapper: finished request
+23.08.2019 19:23:15.091 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:15.091 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpConnectionHandler (0x559ad0770690): finished request
+23.08.2019 19:23:15.122 0 DEBUG    0x7fa0ee226700 User:admin RequestMapper: finished request
+23.08.2019 19:23:15.122 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:23:15.122 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): finished request
+23.08.2019 19:23:15.410 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): read input
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: from ::1: GET /js/charts/core.js.map HTTP/1.1
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): received request
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} RequestMapper: path=/js/charts/core.js.map
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:admin StaticFileController: Cache miss for /js/charts/core.js.map
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/js/charts/core.js.map
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:admin RequestMapper: finished request
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:23:15.411 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): finished request
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): read input
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: from ::1: GET /js/charts/charts.js.map HTTP/1.1
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): received request
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} RequestMapper: path=/js/charts/charts.js.map
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:15.439 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:15.440 0 DEBUG    0x7fa0ee226700 User:admin StaticFileController: Cache miss for /js/charts/charts.js.map
+23.08.2019 19:23:15.440 0 DEBUG    0x7fa0ee226700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/js/charts/charts.js.map
+23.08.2019 19:23:15.440 0 DEBUG    0x7fa0ee226700 User:admin RequestMapper: finished request
+23.08.2019 19:23:15.440 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:23:15.440 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): finished request
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read input
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: from ::1: GET /vf/listFile HTTP/1.1
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept: */*
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:23:15.444 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:15.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): received request
+23.08.2019 19:23:15.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} RequestMapper: path=/vf/listFile
+23.08.2019 19:23:15.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:15.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:15.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:15.445 0 DEBUG    0x7fa0ef228700 User:admin RequestMapper: finished request
+23.08.2019 19:23:15.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:23:15.445 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): finished request
+23.08.2019 19:23:15.458 0 DEBUG    0x7fa0ee226700 User:{currentUser} HttpConnectionHandler (0x559ad07748a0): disconnected
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read input
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: from ::1: GET /js/charts/themes/animated.js.map HTTP/1.1
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): received request
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} RequestMapper: path=/js/charts/themes/animated.js.map
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: Cache miss for /js/charts/themes/animated.js.map
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/js/charts/themes/animated.js.map
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: unknown MIME type for filename '/js/charts/themes/animated.js.map'
+23.08.2019 19:23:15.469 0 DEBUG    0x7fa0ef228700 User:admin RequestMapper: finished request
+23.08.2019 19:23:15.470 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:23:15.470 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): finished request
+23.08.2019 19:23:15.535 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read input
+23.08.2019 19:23:15.535 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:23:15.535 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: from ::1: GET /LogSourses/23.08.19_id=2.dat HTTP/1.1
+23.08.2019 19:23:15.535 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:23:15.535 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:23:15.535 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:23:15.535 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:23:15.535 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept: */*
+23.08.2019 19:23:15.535 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
+23.08.2019 19:23:15.535 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:23:15.535 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:23:15.535 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:15.535 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:23:15.536 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:23:15.536 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:23:15.536 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:23:15.536 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:15.536 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): received request
+23.08.2019 19:23:15.536 0 DEBUG    0x7fa0ef228700 User:{currentUser} RequestMapper: path=/LogSourses/23.08.19_id=2.dat
+23.08.2019 19:23:15.536 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:15.536 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:15.536 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:15.536 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: Cache miss for /LogSourses/23.08.19_id=2.dat
+23.08.2019 19:23:15.536 0 DEBUG    0x7fa0ef228700 User:admin StaticFileController: Open file /home/prog/QTProg/Raspberry/webHomeServer/webApp/docroot/LogSourses/23.08.19_id=2.dat
+23.08.2019 19:23:15.536 0 DEBUG    0x7fa0ef228700 User:admin RequestMapper: finished request
+23.08.2019 19:23:15.536 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:23:15.536 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): finished request
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read input
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: from ::1: GET /menu/settings HTTP/1.1
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header upgrade-insecure-requests: 1
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/charts
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): received request
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} RequestMapper: path=/menu/settings
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:22.277 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=4
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin language=ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached menu-ru_RU
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached menu-ru
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settings-ru_RU
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settings-ru
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settings-en_US
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settings-en
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settings
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settingsHead-ru_RU
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settingsHead-ru
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settingsHead-en_US
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settingsHead-en
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin TemplateCache: trying cached settingsHead
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:admin RequestMapper: finished request
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:23:22.278 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): finished request
+23.08.2019 19:23:22.478 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read input
+23.08.2019 19:23:22.478 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:23:22.478 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: from ::1: POST /login.html HTTP/1.1
+23.08.2019 19:23:22.478 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:23:22.478 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:23:22.478 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header content-length: 13
+23.08.2019 19:23:22.478 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header origin: http://localhost:8080
+23.08.2019 19:23:22.478 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:23:22.478 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:23:22.478 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header content-type: application/x-www-form-urlencoded
+23.08.2019 19:23:22.478 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept: */*
+23.08.2019 19:23:22.478 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/settings
+23.08.2019 19:23:22.478 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:23:22.478 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:23:22.478 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:22.478 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:23:22.479 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: expect 13 bytes body
+23.08.2019 19:23:22.479 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: receive body
+23.08.2019 19:23:22.479 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:23:22.479 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:23:22.479 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:22.479 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): received request
+23.08.2019 19:23:22.479 0 DEBUG    0x7fa0ef228700 User:{currentUser} RequestMapper: path=/login.html
+23.08.2019 19:23:22.479 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:22.479 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:22.479 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:22.479 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:22.479 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=4
+23.08.2019 19:23:22.479 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:22.479 0 DEBUG    0x7fa0ef228700 User:admin username=
+23.08.2019 19:23:22.479 0 DEBUG    0x7fa0ef228700 User:admin password=
+23.08.2019 19:23:22.479 1 WARNING  0x7fa0ef228700 User:admin QSqlDatabasePrivate::addDatabase: duplicate connection name 'qt_sql_default_connection', old connection removed.
+23.08.2019 19:23:22.480 1 WARNING  0x7fa0ef228700 User:admin QSqlQuery::value: not positioned on a valid record
+23.08.2019 19:23:22.480 0 DEBUG    0x7fa0ef228700 User:admin HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:22.480 0 DEBUG    0x7fa0ef228700 User:admin RequestMapper: finished request
+23.08.2019 19:23:22.480 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:23:22.480 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): finished request
+23.08.2019 19:23:22.486 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): read input
+23.08.2019 19:23:22.486 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: read request
+23.08.2019 19:23:22.486 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: from ::1: GET /vf/allFile HTTP/1.1
+23.08.2019 19:23:22.486 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header host: localhost:8080
+23.08.2019 19:23:22.486 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header connection: keep-alive
+23.08.2019 19:23:22.486 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36
+23.08.2019 19:23:22.486 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header dnt: 1
+23.08.2019 19:23:22.486 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept: */*
+23.08.2019 19:23:22.486 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header referer: http://localhost:8080/menu/settings
+23.08.2019 19:23:22.486 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-encoding: gzip, deflate, br
+23.08.2019 19:23:22.486 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+23.08.2019 19:23:22.487 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: received header cookie: sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:22.487 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: headers completed
+23.08.2019 19:23:22.487 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: expect no body
+23.08.2019 19:23:22.487 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract and decode request parameters
+23.08.2019 19:23:22.487 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: extract cookies
+23.08.2019 19:23:22.487 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpRequest: found cookie sessionid={79e4c34e-18e0-45e4-ab65-7363850cae4b}
+23.08.2019 19:23:22.487 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): received request
+23.08.2019 19:23:22.487 0 DEBUG    0x7fa0ef228700 User:{currentUser} RequestMapper: path=/vf/allFile
+23.08.2019 19:23:22.487 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:22.487 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=3
+23.08.2019 19:23:22.487 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:23:22.504 0 DEBUG    0x7fa0ef228700 User:admin RequestMapper: finished request
+23.08.2019 19:23:22.504 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:23:22.504 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): finished request
+23.08.2019 19:23:47.873 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0792900): disconnected
+23.08.2019 19:23:47.873 0 DEBUG    0x7fa0eea27700 User:{currentUser} HttpConnectionHandler (0x559ad0770690): disconnected
+23.08.2019 19:23:47.873 0 DEBUG    0x7fa0ef228700 User:{currentUser} HttpConnectionHandler (0x559ad078c540): disconnected
+23.08.2019 19:23:47.873 0 DEBUG    0x7fa0ed713700 User:{currentUser} HttpConnectionHandler (0x559ad078c3d0): disconnected
+23.08.2019 19:24:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:24:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:24:00.382 0 DEBUG    0x7fa0d7fff700 User:{currentUser} HttpConnectionHandler (0x559ad0792900): thread stopped
+23.08.2019 19:24:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpConnectionHandler (0x559ad0792900): destroyed
+23.08.2019 19:24:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpConnectionHandlerPool: Removed connection handler (0x559ad0792900), pool size is now 4
+23.08.2019 19:25:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:25:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:26:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:26:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:27:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:27:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:28:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:28:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:29:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:29:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:30:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:30:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:31:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:31:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:32:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:32:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:33:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:33:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:34:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:34:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:35:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:35:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:36:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:36:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:37:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:37:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:38:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:38:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:39:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:39:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:40:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:40:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:41:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:41:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:42:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:42:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:43:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:43:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:44:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:44:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:45:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:45:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:46:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:46:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:47:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:47:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:48:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:48:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:49:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:49:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:50:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:50:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:51:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:51:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:52:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:52:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:53:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:53:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:54:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:54:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:55:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:55:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:56:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:56:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:57:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:57:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:58:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:58:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 19:59:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 19:59:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:00:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:00:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:01:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:01:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:02:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:02:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:03:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:03:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:04:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:04:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:05:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:05:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:06:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:06:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:07:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:07:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:08:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:08:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:09:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:09:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:10:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:10:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:11:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:11:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:12:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:12:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:13:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:13:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:14:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:14:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:15:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:15:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:16:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:16:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:17:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:17:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:18:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:18:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:19:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:19:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:20:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:20:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:21:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:21:00.381 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:22:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:22:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:23:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:23:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:24:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (constructor) copy session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=2
+23.08.2019 20:24:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSessionStore: session {79e4c34e-18e0-45e4-ab65-7363850cae4b} expired
+23.08.2019 20:24:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=1
+23.08.2019 20:24:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: (destructor) session {79e4c34e-18e0-45e4-ab65-7363850cae4b} refCount=0
+23.08.2019 20:24:00.382 0 DEBUG    0x7fa0f42e0780 User:{currentUser} HttpSession: deleting data

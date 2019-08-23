@@ -161,7 +161,8 @@ void Source::WriteToFile(QString *buff)
                 len = log_file->write(bufferData.toUtf8 ()); // пишем его в файл
             }else {
                 isok = log_file->open(QIODevice::Append | QIODevice::Text); //QIODevice::ReadWrite |
-                if(log_file->size ()<= 1){
+
+                if(log_file->size ()<= 1){// если файл пуст
                      len = log_file->write(bufferData.toUtf8 ()); // пишем его в файл
                 }else{
                     len = log_file->write(",\n"); // пишем!

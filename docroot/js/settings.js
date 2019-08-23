@@ -34,9 +34,11 @@ function handlerRequest() {
 
         for (const key in listLogFile) {
             if (listLogFile.hasOwnProperty(key)) {
+
                 arrFiles.push(listLogFile[key]);
             }
         }
+
         var time = performance.now();
         console.log(time);
         if (arrFiles.length != 0) {
@@ -48,7 +50,7 @@ function handlerRequest() {
                 if (arrFind.length > 1) {
                     console.log(`error name file: ${tempsStr}`);
                 } else {
-                    // подумать над расстлсовкой в одном цикле
+                    // разбор массива на отдельные массивы и установка их в объект
                     if (typeof listID[arrFind[0]] !== "undefined") {
                         //ключ есть
                         listID[arrFind[0]].push(tempsStr);
@@ -61,34 +63,61 @@ function handlerRequest() {
             }
             var i = 0;
             //таблица
+            let table = document.createElement("table"),
+                nameRow = document.createElement("tr");
+                table.className = "tableCharts";
+                nameRow.innerHTML = "<th></th><th>ID</th><th>Файлы</th>";
+                // caption = document.createElement("caption");
+                // caption.innerText = 
+                table.appendChild(nameRow);
             for (const key in listID) {
-                let row = document.createElement("tr");
-                var cell1 = document.createElement("td");
-                var cell2 = document.createElement("td");
-                let checkBox = document.createElement('input');
+                let row = document.createElement("tr"),
+                    cell1 = document.createElement("td"),
+                    cell2 = document.createElement("td"),
+                    cellID = document.createElement("td"),
+                    checkBox = document.createElement('input');
                 checkBox.type = 'checkbox';
 
                 if (listID.hasOwnProperty(key)) {
                     let arr = listID[key];
                     checkBox.id = key;
+                    let Str = "" + key;
+                    let find = Str.match(/[0-9]{1,2}/i); 
+                    if (find.length > 1) {
+                        console.log(`error name file: ${Str}`);
+                    } else {
+                        cellID.innerHTML = find[0];
+                    }
+
                     cell1.appendChild(checkBox);
                     selects[i] = document.createElement("select");
                     selects[i].className = "listfiles";
 
                     arr.forEach(element => {
                         let option = document.createElement("option");
-                        option.innerHTML = element;
+                        let tempsStr = "" + arrFiles[i];
+                        let Find = tempsStr.match(/[0-9]{2}.[0-9]{2}.[0-9]{2}/i);
+                        if (Find.length > 1) {
+                            console.log(`error name file: ${tempsStr}`);
+                            option.innerHTML = "err file name";
+                        } else {
+                            option.innerHTML = Find[0];
+                        }
+
                         option.value = element;
                         selects[i].appendChild(option);
+
                     });
-                    
+
                     cell2.appendChild(selects[i]);
                     row.appendChild(cell1);
+                    row.appendChild(cellID);
                     row.appendChild(cell2);
                 }
                 i++;
-                setcharts.appendChild(row);
+                table.appendChild(row);
             }
+            setcharts.appendChild(table);
 
         }
         console.log(performance.now() - time);
