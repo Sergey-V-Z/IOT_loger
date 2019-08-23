@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/charts.css">
+
+</head>
+
+<body>
+    <div class="topnav" id="Topnav">
+        <!-- class="active" -->
+        <a id="menu"></a>
+        <a href="index.html" id="data">Данные</a>
+        <a href="charts.html" id="charts" >Графики</a>
+        <a href="settings.html" id="settings">Настройки</a>
+        <a href="control.html" id="control">Управление</a>
+        <a href="javascript:void(0);" class="icon" onclick="menuFunc()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <div class="main">
+            <div id="chartdiv"></div>
+
+    </div>
+
+    <script src="js/charts/core.js"></script>
+    <script src="js/charts/charts.js"></script>
+    <script src="js/charts/themes/animated.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+
+</html>

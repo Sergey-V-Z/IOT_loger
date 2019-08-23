@@ -1,0 +1,73 @@
+<div class="main">
+
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="personbox">
+                        <form id="person" name="person" method='POST' action='/login.html'>
+                            <fieldset>
+                                <legend>Настройки пользователей</legend>
+                                <p><input type='text' name='username' placeholder="Username"></p>
+                                <p><input type='password' name='password' placeholder="Password"></p>
+                                <span>
+                                    <input id="registr" class="btn" type='button' value="registr">
+                                </span>
+                            </fieldset>
+                        </form>
+                        <form id="deletuser" name="deletuser" method='POST' action='/login.html'>
+                            <fieldset>
+                                <legend>Список пользователей</legend>
+                                <p><select id="userlist" class="users" form="deletuser" name="username" size="1">
+                                        <!-- <option>admin</option> -->
+                                    </select></p>
+                                <p><input type='password' name='password' placeholder="Password"></p>
+                                <input id="delet" class="btn" type='button' value="delet">
+
+                            </fieldset>
+
+                        </form>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="pageset">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td> <input class="timerSet" type="checkbox" id="updatepages"></td>
+                                    <td>Обновлене данных на страницах:</td>
+                                    <td><input class="timerSet" type="number" id="intervalTime" min="1" max="600000"
+                                            required>
+                                    </td>
+                                    <td>секунд</td>
+
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Время показа сообшения в statusbar:</td>
+                                    <td><input class="timerSet" type="number" id="footerTime" min="1" max="600000"
+                                            required>
+                                    </td>
+                                    <td>секунд</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="setcharts">
+
+                    </div>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    <br>
+    <script src="/js/settings.js"></script>
+</div>

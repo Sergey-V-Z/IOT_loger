@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {head}
+    <script src="/js/menu.js"></script>
+
+</head>
+
+<body>
+    <div class="topnav" id="Topnav">
+        <!-- class="active" -->
+        <a id="menu"></a>
+        <a href="/menu/index" id="index">Данные</a>
+        <a href="/menu/charts" id="charts">Графики</a>
+        <a href="/menu/settings" id="settings">Настройки</a>
+        <a href="/menu/control" id="control">Управление</a>
+        <a href="/login.html?setuser=logout">Logout</a>
+
+        <!-- <a href="/menu/2" id="2">2</a> -->
+        <a href="javascript:void(0);" class="icon" onclick="menuFunc()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    {page}
+    <footer id="footer"><div id="footdiv"></div></footer>
+</body>
+
+</html>

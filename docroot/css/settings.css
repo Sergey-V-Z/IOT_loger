@@ -1,0 +1,35 @@
+.main {
+    margin-left: 3%;
+}
+
+form {
+    /* position: relative;
+    top: 0px; */
+    display: inline-flex;
+}
+
+fieldset {
+    max-width: 400px;
+    display: inline;
+}
+
+.btn {
+    margin-inline-end: 10px;
+}
+
+.personbox {
+    margin-top: 30px;
+}
+
+.pageset {
+    margin-top: 30px;
+}
+
+.users {
+    min-width: 100px;
+}
+
+.listfiles {
+    display: flex;
+    flex-wrap: wrap;
+}
