@@ -6,11 +6,8 @@ let userList = document.getElementById("userlist"),
     checkBoxUpdate = document.getElementById("updatepages"),
     inputIntervalTime = document.getElementById("intervalTime"),
     inputFooterTime = document.getElementById("footerTime"),
-    statusBar = document.getElementById("footDiv"),
-    setcharts = document.getElementById("setcharts");
-var users, requestList, listLogFile;
-var arrFiles = [];
-var selects = [];
+    statusBar = document.getElementById("footDiv");
+var users, listLogFile;
 var keySettingsTimer = "settingsTimer";
 /**
  * класс настроек таймера
@@ -22,107 +19,7 @@ var keySettingsTimer = "settingsTimer";
 //     }
 // }
 
-/**
- * обработчик данных с сервера
- */
-function handlerRequest() {
-    if (requestList.readyState === 4 && requestList.status === 200) {
 
-        let type = requestList.getResponseHeader('Content-Type');
-        let rawText = requestList.responseText;
-        listLogFile = JSON.parse(rawText);
-
-        for (const key in listLogFile) {
-            if (listLogFile.hasOwnProperty(key)) {
-
-                arrFiles.push(listLogFile[key]);
-            }
-        }
-
-        var time = performance.now();
-        console.log(time);
-        if (arrFiles.length != 0) {
-            // тут сортировку или добавить ее на сервере
-            let listID = {};
-            for (let i = 0; i < arrFiles.length; i++) {
-                let tempsStr = "" + arrFiles[i];
-                let arrFind = tempsStr.match(/id=[0-9]{0,2}/i);
-                if (arrFind.length > 1) {
-                    console.log(`error name file: ${tempsStr}`);
-                } else {
-                    // разбор массива на отдельные массивы и установка их в объект
-                    if (typeof listID[arrFind[0]] !== "undefined") {
-                        //ключ есть
-                        listID[arrFind[0]].push(tempsStr);
-                    } else {
-                        //ключа нет
-                        listID[arrFind[0]] = [];
-                        listID[arrFind[0]].push(tempsStr);
-                    }
-                }
-            }
-            var i = 0;
-            //таблица
-            let table = document.createElement("table"),
-                nameRow = document.createElement("tr");
-                table.className = "tableCharts";
-                nameRow.innerHTML = "<th></th><th>ID</th><th>Файлы</th>";
-                // caption = document.createElement("caption");
-                // caption.innerText = 
-                table.appendChild(nameRow);
-            for (const key in listID) {
-                let row = document.createElement("tr"),
-                    cell1 = document.createElement("td"),
-                    cell2 = document.createElement("td"),
-                    cellID = document.createElement("td"),
-                    checkBox = document.createElement('input');
-                checkBox.type = 'checkbox';
-
-                if (listID.hasOwnProperty(key)) {
-                    let arr = listID[key];
-                    checkBox.id = key;
-                    let Str = "" + key;
-                    let find = Str.match(/[0-9]{1,2}/i); 
-                    if (find.length > 1) {
-                        console.log(`error name file: ${Str}`);
-                    } else {
-                        cellID.innerHTML = find[0];
-                    }
-
-                    cell1.appendChild(checkBox);
-                    selects[i] = document.createElement("select");
-                    selects[i].className = "listfiles";
-
-                    arr.forEach(element => {
-                        let option = document.createElement("option");
-                        let tempsStr = "" + arrFiles[i];
-                        let Find = tempsStr.match(/[0-9]{2}.[0-9]{2}.[0-9]{2}/i);
-                        if (Find.length > 1) {
-                            console.log(`error name file: ${tempsStr}`);
-                            option.innerHTML = "err file name";
-                        } else {
-                            option.innerHTML = Find[0];
-                        }
-
-                        option.value = element;
-                        selects[i].appendChild(option);
-
-                    });
-
-                    cell2.appendChild(selects[i]);
-                    row.appendChild(cell1);
-                    row.appendChild(cellID);
-                    row.appendChild(cell2);
-                }
-                i++;
-                table.appendChild(row);
-            }
-            setcharts.appendChild(table);
-
-        }
-        console.log(performance.now() - time);
-    }
-}
 //обработчик input FooterTime
 function hendlerFooterTimer(event) {
     let strObj = localStorage.getItem(window.keySettingsMessage);
@@ -208,17 +105,7 @@ function usersEvent(e) {
     xhr.send(formData);
 
 }
-// запрос всех файлов логирования
-function getFilesList() {
-    /**
-     * Запрос данных с сервера
-     */
-    requestList = new XMLHttpRequest();
-    requestList.open('GET', '/vf/allFile');
-    requestList.onreadystatechange = handlerRequest;
-    requestList.send();
 
-}
 // Запрос списка ползователе и занесение их в список после ответа
 function getUsers() {
     xhrUsers.open("POST", "/login.html");
@@ -242,7 +129,6 @@ function getUsers() {
 document.addEventListener('DOMContentLoaded', function () {
     getUsers();
     getSetSettings();
-    getFilesList();
     delet.addEventListener('click', usersEvent);
     registr.addEventListener('click', usersEvent);
     checkBoxUpdate.addEventListener('click', hendlerIntervalTime);

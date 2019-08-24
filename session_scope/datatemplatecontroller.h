@@ -11,7 +11,7 @@ public:
     DataTemplateController(QObject* parent=nullptr);
     void service(HttpRequest& request, HttpResponse& response);
 private:
-    QList<QString> list;
+
 };
 
 #endif // DATATEMPLATECONTROLLER_H

@@ -4,14 +4,6 @@
 
 DataTemplateController::DataTemplateController(QObject* parent):HttpRequestHandler (parent)
 {
-    list.append("Robert");
-    list.append("Lisa");
-    list.append("Hannah");
-    list.append("Ludwig");
-    list.append("Miranda");
-    list.append("Fracesco");
-    list.append("Kim");
-    list.append("Jacko");
 }
 void DataTemplateController::service(HttpRequest &request, HttpResponse &response) {
 

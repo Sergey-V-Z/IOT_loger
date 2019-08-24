@@ -81,7 +81,7 @@ void CurrentPoint::service(HttpRequest &request, HttpResponse &response)
     else{
         response.setHeader("Content-Type", "text/html; charset=UTF-8");
         response.write("<html><body>");
-        response.write("Vortual file list: <br> <a href=\"/vf/settings \">Settings<a>");
+        response.write("Virtual file list: <br> <a href=\"/vf/settings \">Settings<a>");
         response.write(" <br> <a href=\"/vf/curentpoint \">Curent point<a>");
         response.write("<br> <a href=\"/vf/listFile \">List log Files<a> ");
         response.write("<br> <a href=\"/vf/updateSet\">Update settings sensors<a> ");
