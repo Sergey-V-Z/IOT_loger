@@ -10,6 +10,7 @@
 #include <QFile>
 #include<QDir>
 #include<QDate>
+#include<QDateTime>
 
 using namespace stefanfrings;
 
@@ -39,6 +40,7 @@ private:
     QSettings *settingSensors;
     QString logFolder;
     QStringList getFilesList(QString mask);
+    QStringList sortDateList(QStringList list);
 };
 
 #endif // CURRENTPOINT_H

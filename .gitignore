@@ -36,7 +36,8 @@ Thumbs.db
 /.qmake.stash
 /build*
 /LogSourses
-*.log
+*.log*
+*.dat
 
 # qtcreator generated files
 *.pro.user*
@@ -74,3 +75,5 @@ Thumbs.db
 *.dll
 *.exe
 
+
+logs/

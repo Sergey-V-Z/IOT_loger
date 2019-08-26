@@ -50,7 +50,7 @@ void CurrentPoint::service(HttpRequest &request, HttpResponse &response)
     }
     else if (path == "/vf/allFile") {
         // читаем все файлы в директории
-        QStringList list = getFilesList ( "*.dat");
+        QStringList list = sortDateList (getFilesList ( "*.dat"));
         for (int i = 0; i < list.count (); ++i) {
             currentAllFiles->insert (QString::number (i), "/" +  logFolder + "/" + list[i]);
         }
@@ -126,7 +126,9 @@ void CurrentPoint::setSettingsJSON(QJsonObject Settings)
     }
 }
 
-// Ищит файлы по маске в заданной в настройках директории
+/*
+ * Ищит файлы по маске в заданной в настройках директории
+*/
 QStringList CurrentPoint::getFilesList(QString mask)
 {
     QDir mDir;
@@ -134,6 +136,38 @@ QStringList CurrentPoint::getFilesList(QString mask)
     QFileInfo configFile (settingSensors->value("logFile").toString());
     path = QFileInfo(configFile.absolutePath(),path).absoluteFilePath();
     mDir.setPath(path);
-    return  mDir.entryList(QStringList()<< mask,QDir::NoFilter,QDir::Time);
+    return  mDir.entryList(QStringList()<< mask,QDir::NoFilter,QDir::Time);;
 }
 
+/*
+ *  Сортировка файлов по дате в имени файла
+* @ list - принимает лист файлов на сортировку
+*/
+QStringList CurrentPoint::sortDateList(QStringList list )
+{
+    QMap<QDate, QString> map;
+        foreach (QString str, list){
+            QRegExp rx("[0-9]{2}.[0-9]{2}.[0-9]{2}");
+            qint32 pos = rx.indexIn (str); // ищем в строке подстроку по регулярному выражению
+            QString item;
+            if(pos != -1){ // если строка найдена
+                QStringList itemL = rx.capturedTexts (); // копируем найденые строки
+                if(itemL.size () == 1){ // если строка одно
+                    item = itemL[0];
+                }else {
+                    continue;
+                }
+            }else {
+                qDebug() << "incorrect file name:"+ str;
+            }
+            QDate date = QDate::fromString (item,"dd.MM.yy" ); // переводим строку в дату
+            map.insertMulti (date, str);
+        }
+        list = map.values();
+        int n = list.size ();
+        for (int i = 0; i != n /2; ++i) {
+            list.swap (i, n-i-1);
+        }
+        return  list;
+
+}

@@ -82,10 +82,9 @@ function handlerListFiles() {
 
           arr.forEach(element => {
             let option = document.createElement("option");
-            let tempsStr = "" + arrFiles[i];
-            let Find = tempsStr.match(/[0-9]{2}.[0-9]{2}.[0-9]{2}/i);
+            let Find = element.match(/[0-9]{2}.[0-9]{2}.[0-9]{2}/i);
             if (Find.length > 1) {
-              console.log(`error name file: ${tempsStr}`);
+              console.log(`error name file: ${element}`);
               option.innerHTML = "err file name";
             } else {
               option.innerHTML = Find[0];
