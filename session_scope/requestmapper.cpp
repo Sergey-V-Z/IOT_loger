@@ -8,7 +8,7 @@ Logger* RequestMapper::logger=nullptr;
 CurrentPoint *RequestMapper::currentPoint=nullptr;
 settingsControl *RequestMapper::settingsController=nullptr;
 
-RequestMapper::RequestMapper(QSettings *settings, QSettings *loginSet, QObject* parent)
+RequestMapper::RequestMapper(DescriptionOfSensor *descriptSensors, QSettings *settings, QSettings *loginSet, QObject* parent)
     : HttpRequestHandler(parent) {
     // Выделение памяти
      loginController = new LoginController (loginSet, parent);
@@ -16,7 +16,7 @@ RequestMapper::RequestMapper(QSettings *settings, QSettings *loginSet, QObject* 
     RequestMapper::settingsController = new settingsControl (parent); // Контроллер приема настроек
     eventController = new sseCtrl(parent);
 //    RequestMapper::userStor = new QMap<QString, QByteArray> ();
-
+    this->descriptSensors = descriptSensors;
     //loginController.setLoginBase(loginSet);
 }
 
@@ -57,6 +57,9 @@ void RequestMapper::service(HttpRequest& request, HttpResponse& response) {
     }
     else if (path.startsWith("/vf")) {
         currentPoint->service(request, response);
+    }
+    else if (path.startsWith("/data")) {
+        dataJSON.service(request, response, descriptSensors);
     }
     else if (path.startsWith("/sse")) {
         eventController->service(request, response);

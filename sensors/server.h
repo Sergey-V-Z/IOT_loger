@@ -13,6 +13,8 @@
 #include"QSettings"
 #include"QDir"
 #include"source.h"
+#include "descriptionofsensor.h"
+
 //#include "../session_scope/requestmapper.h"
 
 
@@ -21,7 +23,7 @@ class server : public QObject{
     Q_OBJECT
 public:
     explicit server(QObject *parent = nullptr);
-    server(QSettings *settingSens, QSettings *settingOther, QObject *parent);
+    server(DescriptionOfSensor *descriptSensors, QSettings *settingOther, QObject *parent);
     ~server();
     QMap<QString, Source *> Sensors;
 

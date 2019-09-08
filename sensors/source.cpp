@@ -3,7 +3,7 @@
 */
 
 #include "source.h"
-
+//extern descriptSensors;
 //Контструктор принимает указатели на обект файла для записи и указатель на обьект (времени)
 Source::Source(QString id, QSettings *settings, QDateTime *date,QObject *parent) : QObject(parent)
 {

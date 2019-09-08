@@ -4,29 +4,24 @@ server::server(QObject *parent) : QObject(parent)
 {
 }
 
-server::server(QSettings *settingSens, QSettings *settingOther, QObject *parent) : QObject(parent){
+server::server(DescriptionOfSensor *descriptSensors, QSettings *settingOther, QObject *parent) : QObject(parent){
     Tcp_server = new QTcpServer(this);
     my_file = new QFile(this);
     Date = new QDateTime();
 
     // Считываем ключи из настроек
-    QStringList sensKey = settingSens->allKeys();
+    QStringList sensKey = descriptSensors->keys ();
     int sensInt = sensKey.length();
     // создание в цикле MAP  объектов сенсоров
     for (int i = 0; i < sensInt; ++i) {
-        // если в настройках есть строка с ключем
-        if(settingSens->contains(sensKey[i])){
-            QString templat = settingSens->value(sensKey[i], "non").toString(); // получаем шаблон
+            QString templat = descriptSensors->getTemplates (sensKey[i]); // получаем шаблон
             if(templat == "non"){
                 qDebug () << "error in settings! key found but content is emty or not correckt";
                 continue;
             }
-            sensKey[i].insert(2,"="); // добовление знака = чтобы совместить с датчиками
             Sensors.insert(sensKey[i], new Source(sensKey[i], settingOther, Date ));
             Sensors.value(sensKey[i])->setTemplate(templat); // добовление шаблона в обьект
-        }else {
-            continue;
-        }
+
     }
 
     connect(Tcp_server, SIGNAL(newConnection()), this, SLOT(slotNewConnection()));

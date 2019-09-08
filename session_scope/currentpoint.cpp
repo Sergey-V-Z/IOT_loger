@@ -65,7 +65,7 @@ void CurrentPoint::service(HttpRequest &request, HttpResponse &response)
         QRegExp reg("id=\\d{0,3}");
         for (int i = 0; i < list.count (); ++i) {
             int pos = reg.indexIn (list[i]);
-            if(pos != 0){
+            if(pos != -1){
                 QStringList find = reg.capturedTexts ();
                 if(find.count ()> 1){continue;}
                 currentFileNames->insert ( find[0], "/" + logFolder + "/" +list[i]);
@@ -84,8 +84,8 @@ void CurrentPoint::service(HttpRequest &request, HttpResponse &response)
         response.write("Virtual file list: <br> <a href=\"/vf/settings \">Settings<a>");
         response.write(" <br> <a href=\"/vf/curentpoint \">Curent point<a>");
         response.write("<br> <a href=\"/vf/listFile \">List log Files<a> ");
-        response.write("<br> <a href=\"/vf/updateSet\">Update settings sensors<a> ");
         response.write("<br> <a href=\"/vf/allFile\">All Files in dir<a> ");
+        response.write("<br> <a href=\"/vf/updateSet\">Update settings sensors<a> ");
 
         //        response.write("<br> <a href=\"/vf/settings \">settings<a> ");
         response.write("</body></html>",true);

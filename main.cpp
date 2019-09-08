@@ -1,4 +1,4 @@
-#include <QCoreApplication>
+﻿#include <QCoreApplication>
 #include <QSettings>
 #include <QFile>
 #include <QDir>
@@ -8,17 +8,19 @@
 #include "filelogger.h"
 #include"sensors/server.h"
 #include "connektor.h"
-
+#include "descriptionofsensor.h"
 using namespace stefanfrings;
 
 QString searchConfigFile(QString nameFile);
 
 static server* serverSensor;
+static DescriptionOfSensor *descriptSensors;
 
 int main(int argc, char *argv[])
 {
     QCoreApplication app(argc, argv);
     QString configFileName=searchConfigFile("webapp.ini");
+    QString descriptFileName=searchConfigFile("description.json");
 
     // Configure logging
     QSettings* logSettings=new QSettings(configFileName,QSettings::IniFormat,&app);
@@ -49,8 +51,8 @@ int main(int argc, char *argv[])
     RequestMapper::templateCache=new TemplateCache(templateSettings,&app);
 
     // Template Sensors
-    QSettings* sensorTemplates=new QSettings(configFileName,QSettings::IniFormat,&app);
-    sensorTemplates->beginGroup("templatSensors");
+//    QSettings* sensorTemplates=new QSettings(configFileName,QSettings::IniFormat,&app);
+//    sensorTemplates->beginGroup("templatSensors");
 
     // Configure server sensors
     QSettings* servSet=new QSettings(configFileName,QSettings::IniFormat,&app);
@@ -60,15 +62,58 @@ int main(int argc, char *argv[])
     QSettings* loginBase=new QSettings(configFileName,QSettings::IniFormat,&app);
     loginBase->beginGroup("loginBase");
 
-    // Start the HTTP server
-    RequestMapper* mapper = new RequestMapper(servSet, loginBase, &app);
-    new HttpListener(listenerSettings, mapper , &app);
+    // Description Sensor
+    descriptSensors = new DescriptionOfSensor(descriptFileName);
+//    QByteArray arr = "{\"id=10\": {\
+//                     \"name\": \"TestSensor\",\
+//                     \"keys\": [\
+//    {\
+//            \"name\": \"t1\",\
+//             \"userName\": \"\",\
+//             \"min\": null,\
+//             \"max\": null,\
+//             \"first\": false,\
+//             \"color\": \"\"\
+//},\
+//    {\
+//        \"name\": \"T2\",\
+//        \"userName\": \"\",\
+//        \"min\": null,\
+//        \"max\": null,\
+//        \"first\": false,\
+//        \"color\": \"\"\
+//    },\
+//    {\
+//        \"name\": \"a3\",\
+//        \"userName\": \"\",\
+//        \"min\": null,\
+//        \"max\": null,\
+//        \"first\": false,\
+//        \"color\": \"\"\
+//    },\
+//    {\
+//        \"name\": \"A4\",\
+//        \"userName\": \"\",\
+//        \"min\": null,\
+//        \"max\": null,\
+//        \"first\": false,\
+//        \"color\": \"\"\
+//    }\
+//    ]\
+//}}";
+//for (int var = 0; var < 100; ++var) {
+//    bool ok = descript.setDescription (arr);
+//}
 
-    //Server Sensors
-   serverSensor = new server (sensorTemplates, servSet, &app);
-    new Connektor(serverSensor, mapper, &app); // объект для соеденения сигналов и слотов
+// Start the HTTP server
+RequestMapper* mapper = new RequestMapper(descriptSensors, servSet, loginBase, &app);
+new HttpListener(listenerSettings, mapper , &app);
 
-    return app.exec();
+//Server Sensors
+serverSensor = new server (descriptSensors, servSet, &app);
+new Connektor(serverSensor, mapper, &app); // объект для соеденения сигналов и слотов
+
+return app.exec();
 }
 
 /**

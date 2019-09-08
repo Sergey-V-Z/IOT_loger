@@ -1,0 +1,161 @@
+{
+    "id=1": {
+        "keys": [
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "Uin",
+                "userName": ""
+            },
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "unk1",
+                "userName": ""
+            },
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "Uout",
+                "userName": ""
+            },
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "Loaded",
+                "userName": ""
+            },
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "Hethz",
+                "userName": ""
+            },
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "Ubat",
+                "userName": ""
+            },
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "Temper",
+                "userName": ""
+            },
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "Bites",
+                "userName": ""
+            }
+        ],
+        "name": "UPS"
+    },
+    "id=10": {
+        "keys": [
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "t1",
+                "userName": ""
+            },
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "T2",
+                "userName": ""
+            },
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "a3",
+                "userName": ""
+            },
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "A4",
+                "userName": ""
+            }
+        ],
+        "name": "TestSensor"
+    },
+    "id=2": {
+        "keys": [
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "TempBmp",
+                "userName": ""
+            },
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "PressureBmp",
+                "userName": ""
+            },
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "TempDht",
+                "userName": ""
+            },
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "HumDht",
+                "userName": ""
+            },
+            {
+                "color": "",
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "Temp",
+                "userName": ""
+            },
+            {
+                "color": "",
+                "first": false,
+                "max": 4.2,
+                "min": 2,
+                "name": "VBat",
+                "userName": ""
+            }
+        ],
+        "name": "Meteo"
+    }
+}
