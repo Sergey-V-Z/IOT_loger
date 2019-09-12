@@ -19,7 +19,7 @@
             },
             {
                 "color": "",
-                "first": false,
+                "first": true,
                 "max": null,
                 "min": null,
                 "name": "Uout",
@@ -72,7 +72,7 @@
         "keys": [
             {
                 "color": "",
-                "first": false,
+                "first": true,
                 "max": null,
                 "min": null,
                 "name": "t1",
@@ -141,7 +141,7 @@
             },
             {
                 "color": "",
-                "first": false,
+                "first": true,
                 "max": null,
                 "min": null,
                 "name": "Temp",

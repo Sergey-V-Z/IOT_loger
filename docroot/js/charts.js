@@ -3,63 +3,70 @@
 // Set theme
 window.am4core.useTheme(window.am4themes_animated);
 
-let setcharts = document.getElementById("setcharts"),
-  container = document.getElementById("container");
+var setcharts = document.getElementById("setcharts"),
+  container = document.getElementById("container"),
+  mainDiv = document.getElementById("main");
 var logData;
 var currentPoint, currentSettings;
 var storFiles = {};
 var selects = [];
 
+
+/**
+ * Ищет с в строке id=nnn n-цифры и возврощает цыфру из id
+ * @param {Где искать} stringForSearch
+ * @param {Тип возврощаемых данных} fullReturn
+ */
+function idSearch(stringForSearch, fullReturn = false) {
+
+  let arrFind = stringForSearch.match(/id=\d{1,2}/i); // looking for id
+  if (arrFind.length != 1) {
+    console.log(`incorrect file name: ${stringForSearch}`);
+  } else {
+    let idNum = arrFind[0].match(/\d{1,2}/); //looking for number
+    if (idNum.length != 1) {
+      console.log(`incorrect id : ${stringForSearch}`);
+    } else {
+      if (fullReturn === false) {
+        return idNum[0];
+      } else {
+        return {
+          "string": arrFind[0],
+          "number": idNum[0]
+        };
+        // return idNum[0];
+      }
+    }
+  }
+}
 /**
  * Обработчик данных с сервера 
  * Запрос списка файлов
  */
 function handlerListFiles(params) {
-  let listID = {},
-    arrFiles = [];
-  let listLogFile = JSON.parse(params);
-
-  // Преобразуем в массив
-  for (const key in listLogFile) {
-    if (listLogFile.hasOwnProperty(key)) {
-
-      arrFiles.push(listLogFile[key]);
-    }
-  }
-
-  // var time = performance.now();
-  // console.log(time);
+  let listID = {};
+  let arrFiles = JSON.parse(params);
 
   if (arrFiles.length != 0) {
 
-    //преобразуем из массива в обект
+    //Сортируем массив по id и укладываем массивы в объект 
     for (let i = 0; i < arrFiles.length; i++) {
-      let tempsStr = "" + arrFiles[i];
-      let arrFind = tempsStr.match(/id=[0-9]{0,2}/i);
+      let tempsPath = "" + arrFiles[i];
 
-      if (arrFind.length != 1) {
-        console.log(`incorrect file name: ${tempsStr}`);
+      let idNum = idSearch(tempsPath);
+      // разбор массива на отдельные массивы и установка их в объект
+      if (typeof listID[idNum] !== "undefined") {
+        //ключ есть
+        listID[idNum].push(tempsPath);
       } else {
-        let idNum = arrFind[0].match(/\d{1,2}/);
-        if (idNum.length != 1) {
-          console.log(`incorrect id : ${tempsStr}`);
-        } else {
-          // разбор массива на отдельные массивы и установка их в объект
-          if (typeof listID[idNum[0]] !== "undefined") {
-            //ключ есть
-            listID[idNum[0]].push(tempsStr);
-          } else {
-            //ключа нет
-            listID[idNum[0]] = [];
-            listID[idNum[0]].push(tempsStr);
-          }
-        }
+        //ключа нет
+        listID[idNum] = [];
+        listID[idNum].push(tempsPath);
       }
-
     }
 
     var i = 0;
-    //таблица
+    // создание таблицы с селектами и чекбоксами в нутри
     let table = document.createElement("table"),
       nameRow = document.createElement("tr");
     table.className = "tableCharts";
@@ -84,6 +91,7 @@ function handlerListFiles(params) {
         selects[i] = document.createElement("select");
         selects[i].className = "listfiles";
 
+        // Заполнение select
         arr.forEach(element => {
           let option = document.createElement("option");
           let Find = element.match(/[0-9]{2}.[0-9]{2}.[0-9]{2}/i);
@@ -110,36 +118,51 @@ function handlerListFiles(params) {
     setcharts.appendChild(table);
 
   }
-  return listID;
+  return listID; // возврощаем обект с данными для дальнейших работы
 }
 
-//скачивает список файлов с сервера
+//скачивает файлы из переданного списка с сервера
 function uploadsFiles(fileNameArr = []) {
   let i = 0;
   let n = fileNameArr.length;
-  let request = new XMLHttpRequest();
-  request.open('GET', fileNameArr[i]);
-  request.onload = function () {
-    if (request.status == 200 && request.status < 300) {
-      storFiles[fileNameArr[i]] = '[' + request.responseText + ']';
-      if (i < n - 1) {
-        i++;
-        request.open('GET', fileNameArr[i]);
-        request.send();
-      } else {
-        console.log(storFiles);
-        // start drawing
 
-        createChart(JSON.parse(storFiles[fileNameArr[1]]));
+  return new Promise(function (resolve, reject) {
+    let request = new XMLHttpRequest();
+    request.open('GET', fileNameArr[i]);
+    request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+    request.onreadystatechange = function () {
+      if (request.readyState === 4) {
+        if (request.status == 200 && request.status < 300) {
+          let idStr = idSearch(fileNameArr[i], true);
+          storFiles[idStr.string] = {
+            "idNumber": idStr.number,
+            "idElementDOM": "id"+ idStr.number,
+            "path": fileNameArr[i],
+            "data": '[' + request.responseText + ']'
+          };
+          if (i < n - 1) {
+            i++;
+            request.open('GET', fileNameArr[i]);
+            request.send();
+          } else {
+            console.log(storFiles);
+            // start drawing
+            // createChart(JSON.parse(storFiles[fileNameArr[1]]));
+            resolve(storFiles);
+          }
+        } else {
+          reject();
+        }
       }
-    } else {
-      console.log("uploads files");
-    }
-  };
-  request.send();
-
+    };
+    request.send();
+  });
 }
 
+/**
+ * Загружает первые файлы из сортированного списка
+ * @param { обект со списками файлов на сервере} params 
+ */
 function loadingFileLog(params) {
   let fileNameArr = [];
   for (const key in params) {
@@ -148,11 +171,79 @@ function loadingFileLog(params) {
 
     }
   }
-  // запрос на сервер 
-  uploadsFiles(fileNameArr);
+  // запрос на сервер, возврощает промис
+  return uploadsFiles(fileNameArr);
 }
 /**
- * Запрос всех файлов логирования 
+ * Запрашивает описание сенсоров и возврощает обект в котором содержатся описания и файлы сенсоров
+ * @param {переменная хранящая файлы данных сенсоров} storage 
+ */
+function getDescriptions(storage) {
+  return new Promise(function (resolve, reject) {
+    let request = new XMLHttpRequest();
+    request.open('GET', "/data/deskript");
+    request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+    request.onreadystatechange = function () {
+      if (request.readyState === 4) {
+        if (request.status == 200 && request.status < 300) {
+          let descripions = JSON.parse(request.responseText);
+          if (descripions === undefined) {
+            reject();
+          } else {
+            resolve({
+              "storage": storage,
+              "descripions": descripions
+            });
+          }
+        } else {
+          reject();
+        }
+      }
+    };
+    request.send();
+  });
+}
+/** Отрисовка графиков
+ *
+ * dataForCharts = {
+ * "storage": {
+ *          "id=n" :{ "path": ,
+ *                    "data": 
+ *                  },
+ *          "id=n" :{ "path": ,
+ *                    "data": 
+ *                  }
+ *             }
+ * "descripions": {
+ *                  id=n" : {}
+ *                  id=n" : {}
+ *                }
+ *   }
+ */
+function drawing(dataForCharts = {}) {
+  console.log(dataForCharts);
+  let charts = {};
+
+  for (const key in dataForCharts.storage) {
+    if (dataForCharts.storage.hasOwnProperty(key)) {
+      const element = dataForCharts.storage[key];
+
+      let divCont = document.createElement("div");
+      divCont.className = "container";
+
+      // создать div в контейнере
+      dataForCharts.storage[key].div = document.createElement("div");
+      dataForCharts.storage[key].div.className = "chart";
+      dataForCharts.storage[key].div.id = dataForCharts.storage[key].idElementDOM;
+
+      divCont.appendChild(dataForCharts.storage[key].div);
+      mainDiv.appendChild(divCont);
+      charts[key] = createChart(JSON.parse(dataForCharts.storage[key].data), dataForCharts.storage[key].idElementDOM, dataForCharts.descripions[key]);
+    }
+  }
+}
+/**
+ * Запрос списка файлов и затем скачивание файлов логирования 
  * */
 function getFilesList() {
 
@@ -174,8 +265,10 @@ function getFilesList() {
     });
   }
   postData()
-    .then(handlerListFiles)
-    .then(loadingFileLog)
+    .then(handlerListFiles) // после ответа сервера обробатываем ответ и зоздаем таблицу с селектами
+    .then(loadingFileLog) // загружаем самый свежий файл с данными
+    .then(getDescriptions)
+    .then(drawing)
     .catch();
 
 }
@@ -219,38 +312,51 @@ function setSeries(pChart, nameSeries, dateX, valueY, min, max, first = false) {
   }
   return series;
 }
-//отрисовка графиков
-function createChart(data, idElement = '', sett = {}) {
-  // if(idElement === ''){
-  //   console.error('IDelement is empty');
-  //   return;
-  // }
-  // if(sett === {}){
-  //   console.error('sett is empty');
-  //   return;
-  // }
-  var chart = window.am4core.create('chartdiv', window.am4charts.XYChart);
+
+/**
+ * Отрисовка графика
+ * @param {*} data 
+ * @param {*} idElement 
+ * @param {description} sett 
+ */
+function createChart(data, idElement, sett) {
+  if (idElement == undefined || idElement == '') {
+    console.error('IDelement is empty');
+    return;
+  }
+  if (sett == undefined) {
+    console.error('sett is empty');
+    return;
+  }
+  let series;
+  let chart = window.am4core.create(idElement, window.am4charts.XYChart);
   chart.data = data;
   //chart.dataDateFormat = "JJ:NN:SS";
   //формат разбора данных из строки
   chart.dateFormatter.inputDateFormat = "HH:mm:ss";
 
-  var dateAxis = chart.xAxes.push(new window.am4charts.DateAxis());
+  let dateAxis = chart.xAxes.push(new window.am4charts.DateAxis());
   dateAxis.renderer.grid.template.location = 0;
   dateAxis.renderer.ticks.template.length = 8;
   dateAxis.renderer.ticks.template.strokeOpacity = 0.1;
 
 
-  let series = setSeries(chart, "Temp", "Time", "Temp", null, null, true);
-  setSeries(chart, "TempBmp", "Time", "TempBmp");
-  setSeries(chart, "PressureBmp", "Time", "PressureBmp");
-  setSeries(chart, "VBat", "Time", "VBat", 2, 4);
+
+  for (let i = 0; i < sett.keys.length; i++) {
+    const element = sett.keys[i];
+
+    if (element.first == true) {
+      series = setSeries(chart, element.name, "Time", element.name, element.min, element.max, element.first);
+    } else {
+      setSeries(chart, element.name, "Time", element.name, element.min, element.max, element.first);
+    }
+  }
 
   chart.cursor = new window.am4charts.XYCursor();
   chart.cursor.xAxis = dateAxis;
   chart.cursor.behavior = "non"; // выделение области
 
-  var scrollbarX = new window.am4charts.XYChartScrollbar();
+  let scrollbarX = new window.am4charts.XYChartScrollbar();
   scrollbarX.series.push(series);
   chart.scrollbarX = scrollbarX;
 
@@ -258,4 +364,5 @@ function createChart(data, idElement = '', sett = {}) {
   chart.legend.parent = chart.plotContainer;
   chart.legend.zIndex = 100;
   chart.legend.valueLabels.template.text = "{valueY.value.formatNumber('$#.')}";
+  return chart;
 }
