@@ -137,10 +137,10 @@ void Source::updateSet()
     Connect = false;
 }
 
-void Source::WriteToFile(QString *buff)
+void Source::writeToFile(QString *buff)
 {
-    bool isok = false;
-    qint64 len = 0;
+//    bool isok = false;
+//    qint64 len = 0;
     if(fileJSON){
         QJsonDocument tempJSON;
         QJsonObject tempObj = parsString(*buff);
@@ -149,31 +149,29 @@ void Source::WriteToFile(QString *buff)
         QString strID = "id=" + QString :: number (tempObj.value ("id=").toInt ());
         QString FileDate = Date->currentDateTime().toString("dd.MM.yy")+ "_" + strID + ".dat";
         nameFile[strID] =  "/" +  logFolder + "/" + FileDate;
-        log_file->setFileName(Path +  FileDate);
 
         tempJSON.setObject(tempObj); //Добовляем новый обьект из строки данных
+        if(currentFileName == ""){currentFileName = Path +  FileDate;}
 
-        if(buffCount == currentBufferCount){
+        // если изменилясь дата записываем буфер в файл и обновляем имя файла
+        if(Path +  FileDate != currentFileName ){
             //записываем буфер в файл
-            // если файла нет создаем его иначе пишем в конец файла
-            if(!log_file->exists()){
-                isok = log_file->open(QIODevice::WriteOnly);
-                len = log_file->write(bufferData.toUtf8 ()); // пишем его в файл
-            }else {
-                isok = log_file->open(QIODevice::Append | QIODevice::Text); //QIODevice::ReadWrite |
+            log_file->setFileName(currentFileName);
+            writeBoofToFile(bufferData);
+            currentFileName = Path +  FileDate;
+            currentBufferCount = 0;
+            bufferData.clear ();
+            log_file->close();
+        }else {
+            log_file->setFileName(Path +  FileDate);
 
-                if(log_file->size ()<= 1){// если файл пуст
-                     len = log_file->write(bufferData.toUtf8 ()); // пишем его в файл
-                }else{
-                    len = log_file->write(",\n"); // пишем!
-                    len = log_file->write(bufferData.toUtf8 ()); // пишем его в файл
-                }
-            }
-//            len = log_file->write(bufferData.toUtf8 ()); // пишем его в файл
+        }
+        if(buffCount == currentBufferCount ){
+            //записываем буфер в файл
+            writeBoofToFile(bufferData);
             bufferData.clear ();
             currentBufferCount = 0;
             log_file->close();
-
         }else {
             //буфферезируем данные
             if(currentBufferCount == 0){
@@ -223,7 +221,7 @@ QJsonObject Source::parsString(QString raw)
     }else{
         objTemp["Time"]= "er:er:er";
     }
-/*
+    /*
  * Здесь необходимо сделать проверку на количествро
  * шаблонов и пришедших значений если они разные заполнить шаблонны имен
 */
@@ -285,7 +283,24 @@ bool Source::isConnect()
     return Connect;
 }
 
-bool Source::nideUpdateSet()
+bool Source::needToUpdateSet()
 {
     return  NeedUpdateSet;
+}
+
+void Source::writeBoofToFile(QString data)
+{
+    if(!log_file->exists()){
+        log_file->open(QIODevice::WriteOnly);
+        log_file->write(data.toUtf8 ()); // пишем его в файл
+    }else {
+        log_file->open(QIODevice::Append | QIODevice::Text); //QIODevice::ReadWrite |
+        if(log_file->size ()<= 1){// если файл пуст
+            log_file->write(data.toUtf8 ());
+        }else{
+            log_file->write(",\n"); //
+            log_file->write(data.toUtf8 ());
+        }
+    }
+
 }

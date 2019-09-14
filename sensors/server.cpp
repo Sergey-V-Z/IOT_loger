@@ -119,7 +119,7 @@ void server::readyRead() {
         // если у нас есть данные об устройстве
         if(sens->isConnect()){
                            //sendToCliernt(pClientSoket,"wait=501 set?");
-            if(sens->nideUpdateSet ()){
+            if(sens->needToUpdateSet ()){
                 QStringList tempNewSet = sens->getNewSettings ();
                 int totalSet = tempNewSet.size ();
                 QString sendSet;
@@ -134,7 +134,7 @@ void server::readyRead() {
         else{
             sendToCliernt(pClientSoket,"set?");
         }
-        sens->WriteToFile(&buffer); // Пишем в файл
+        sens->writeToFile(&buffer); // Пишем в файл
         // Иначе если этот параметр содержит stat значит то настройки
     }else if(firstParam.contains("stat")){
         sens->saveSettings(listIN);

@@ -119,18 +119,24 @@ bool DescriptionOfSensor::valadateDescriptJSON(QJsonObject verifiedJSON)
         for (int i = 0; i < tempArrJSON.count (); ++i) {
             // если в элемент не объект
             if(!tempArrJSON[i].isObject ()){
-                qWarning("in function (valadateDescriptJSON),val in arrey(keys:i=%i. is not object",i) ;
+                qCritical("in function (valadateDescriptJSON),val in arrey(keys:i=%i. is not object",i) ;
                 return  false;
             }
             QJsonObject tempVal = tempArrJSON[i].toObject ();
             // если в элементе нет ключа
             if (!tempVal.contains ("name")){
-                qWarning() << "in function (valadateDescriptJSON), Obj in arrey 'keys' not contains necessary keys 'name'";
+                qCritical() << "in function (valadateDescriptJSON), Obj in arrey 'keys' not contains necessary key 'name'";
                 return  false;
             }
+            if (!tempVal.contains ("display")){
+                qCritical() << "in function (valadateDescriptJSON), Obj in arrey 'keys' not contains necessary key 'display'";
+                return  false;
+            }
+
         }
-    }else {
-        qWarning() << "in function (valadateDescriptJSON), tempObj not contains necessary keys 'name'or  'keys'";
+    }
+    else {
+        qCritical() << "in function (valadateDescriptJSON), tempObj not contains necessary keys 'name'or  'keys'";
         return false;
     }
     return  true;
@@ -140,7 +146,7 @@ bool DescriptionOfSensor::valadateDescriptJSON(QJsonObject verifiedJSON)
 QJsonObject DescriptionOfSensor::validateFileJSON(QJsonObject verifiedJSON)
 {
     if(verifiedJSON.isEmpty ()){
-        qWarning() << "in function (validateFileJSON)verifiedJSON is empty, bad parametr ";
+        qCritical() << "in function (validateFileJSON)verifiedJSON is empty, bad parametr ";
         return verifiedJSON;
     }
 

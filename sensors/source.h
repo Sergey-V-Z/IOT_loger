@@ -33,14 +33,14 @@ public:
     //Запись строки с настройками датчика
     bool saveSettings(QStringList settings);
     //Запись в файл
-    void WriteToFile(QString *buff);
+    void writeToFile(QString *buff);
     //Запись шаблонов имен переменных
     void setTemplate(QString templates);
-
     bool isConnect();
-    bool nideUpdateSet();
+    bool needToUpdateSet();
 
 private:
+    void writeBoofToFile(QString data);
     bool NeedUpdateSet = false;
     bool Connect = false;
     //настройки датчиков
@@ -49,7 +49,7 @@ private:
     //буфер накопления данных от датчиков
     QString bufferData;
 
-    QString LogFileName;
+    QString currentFileName;
     QString ID;
     QStringList actualSettings;
     QStringList newSettings;

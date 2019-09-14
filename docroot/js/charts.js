@@ -8,7 +8,7 @@ var setcharts = document.getElementById("setcharts"),
   mainDiv = document.getElementById("main");
 var logData;
 var currentPoint, currentSettings;
-var storFiles = {};
+
 var selects = [];
 
 
@@ -39,6 +39,13 @@ function idSearch(stringForSearch, fullReturn = false) {
     }
   }
 }
+/**
+ * Обработчик кликов по таблице настроек
+ */
+var hendlerClickTable = function () {
+  
+};
+
 /**
  * Обработчик данных с сервера 
  * Запрос списка файлов
@@ -125,6 +132,7 @@ function handlerListFiles(params) {
 function uploadsFiles(fileNameArr = []) {
   let i = 0;
   let n = fileNameArr.length;
+  let storFiles = {};
 
   return new Promise(function (resolve, reject) {
     let request = new XMLHttpRequest();
@@ -136,7 +144,7 @@ function uploadsFiles(fileNameArr = []) {
           let idStr = idSearch(fileNameArr[i], true);
           storFiles[idStr.string] = {
             "idNumber": idStr.number,
-            "idElementDOM": "id"+ idStr.number,
+            "idElementDOM": "id" + idStr.number,
             "path": fileNameArr[i],
             "data": '[' + request.responseText + ']'
           };
@@ -145,7 +153,7 @@ function uploadsFiles(fileNameArr = []) {
             request.open('GET', fileNameArr[i]);
             request.send();
           } else {
-            console.log(storFiles);
+            // console.log(storFiles);
             // start drawing
             // createChart(JSON.parse(storFiles[fileNameArr[1]]));
             resolve(storFiles);
@@ -289,8 +297,9 @@ function setSeries(pChart, nameSeries, dateX, valueY, min, max, first = false) {
     valueAxis.tooltip.disabled = true;
   } else {
     valueAxis.tooltip.disabled = true;
-    valueAxis.renderer.opposite = true;
+    valueAxis.renderer.opposite = true; // расположение шкалы
     valueAxis.renderer.grid.template.disabled = true;
+    // valueAxis.disabled = true; //отключение подписи осей
 
   }
   if (min !== undefined || min != null) {
@@ -317,7 +326,7 @@ function setSeries(pChart, nameSeries, dateX, valueY, min, max, first = false) {
  * Отрисовка графика
  * @param {*} data 
  * @param {*} idElement 
- * @param {description} sett 
+ * @param {description sensor} sett 
  */
 function createChart(data, idElement, sett) {
   if (idElement == undefined || idElement == '') {
@@ -344,7 +353,9 @@ function createChart(data, idElement, sett) {
 
   for (let i = 0; i < sett.keys.length; i++) {
     const element = sett.keys[i];
-
+    if (element.display == false) {
+      continue;
+    }
     if (element.first == true) {
       series = setSeries(chart, element.name, "Time", element.name, element.min, element.max, element.first);
     } else {
