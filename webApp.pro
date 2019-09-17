@@ -29,7 +29,8 @@ SOURCES += \
     session_scope/settingscontrol.cpp \
     session_scope/ssectrl.cpp \
     descriptionofsensor.cpp \
-    session_scope/datacontroller.cpp
+    session_scope/datacontroller.cpp \
+    sensors/collectorfiles.cpp
 
 OTHER_FILES += etc/webapp.ini
 
@@ -56,7 +57,8 @@ HEADERS += \
     session_scope/settingscontrol.h \
     session_scope/ssectrl.h \
     descriptionofsensor.h \
-    session_scope/datacontroller.h
+    session_scope/datacontroller.h \
+    sensors/collectorfiles.h
 
 INSTALLS        = target
 target.path     = /home/pi/qtbin/webServer/webHomeServer

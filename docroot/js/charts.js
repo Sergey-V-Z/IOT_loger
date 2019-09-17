@@ -5,11 +5,12 @@ window.am4core.useTheme(window.am4themes_animated);
 
 var setcharts = document.getElementById("setcharts"),
   container = document.getElementById("container"),
-  mainDiv = document.getElementById("main");
+  mainDiv = document.getElementById("main"),
+  selectsTable = document.getElementById("selectsTable");
+selectsTable.className = "tableCharts";
 var logData;
 var currentPoint, currentSettings;
-
-var selects = [];
+//var selects = [];
 
 
 /**
@@ -42,8 +43,8 @@ function idSearch(stringForSearch, fullReturn = false) {
 /**
  * Обработчик кликов по таблице настроек
  */
-var hendlerClickTable = function () {
-  
+var hendlerClickTable = function (event) {
+  console.log(event);
 };
 
 /**
@@ -74,29 +75,29 @@ function handlerListFiles(params) {
 
     var i = 0;
     // создание таблицы с селектами и чекбоксами в нутри
-    let table = document.createElement("table"),
-      nameRow = document.createElement("tr");
-    table.className = "tableCharts";
+    let nameRow = document.createElement("tr");
+
     nameRow.innerHTML = "<th></th><th>ID</th><th>Файлы</th>";
     // caption = document.createElement("caption");
     // caption.innerText = 
-    table.appendChild(nameRow);
+    selectsTable.appendChild(nameRow);
     for (const key in listID) {
+      //элементы для заполнения таблицы
       let row = document.createElement("tr"),
         cell1 = document.createElement("td"),
         cell2 = document.createElement("td"),
         cellID = document.createElement("td"),
         checkBox = document.createElement('input');
       checkBox.type = 'checkbox';
+      let select = document.createElement("select");
+      select.className = "listfiles";
 
       if (listID.hasOwnProperty(key)) {
         let arr = listID[key];
-        checkBox.id = 'id=' + key;
-        let Str = "" + key;
+        checkBox.id = 'c-id=' + key;
+        select.id = 's-id=' + key;
         cellID.innerHTML = key;
         cell1.appendChild(checkBox);
-        selects[i] = document.createElement("select");
-        selects[i].className = "listfiles";
 
         // Заполнение select
         arr.forEach(element => {
@@ -110,19 +111,19 @@ function handlerListFiles(params) {
           }
 
           option.value = element;
-          selects[i].appendChild(option);
+          select.appendChild(option);
 
         });
 
-        cell2.appendChild(selects[i]);
+        cell2.appendChild(select);
         row.appendChild(cell1);
         row.appendChild(cellID);
         row.appendChild(cell2);
       }
       i++;
-      table.appendChild(row);
+      selectsTable.appendChild(row);
     }
-    setcharts.appendChild(table);
+    setcharts.appendChild(selectsTable);
 
   }
   return listID; // возврощаем обект с данными для дальнейших работы
@@ -286,6 +287,7 @@ function getFilesList() {
  */
 document.addEventListener('DOMContentLoaded', function () {
   getFilesList();
+  selectsTable.addEventListener('click', hendlerClickTable);
 });
 
 /**

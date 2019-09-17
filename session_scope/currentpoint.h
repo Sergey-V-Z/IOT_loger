@@ -35,7 +35,7 @@ private:
     static QJsonObject *currentJSON;
     static QJsonObject *currentSettings;
     static QJsonObject *currentFileNames;
-    static QJsonArray *currentAllFiles;
+//    static QJsonArray *currentAllFiles;
 
     QSettings *settingSensors;
     QString logFolder;

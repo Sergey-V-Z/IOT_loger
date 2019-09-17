@@ -6,7 +6,7 @@ int CurrentPoint::countObj;
 QJsonObject* CurrentPoint:: currentJSON;
 QJsonObject* CurrentPoint:: currentSettings;
 QJsonObject* CurrentPoint:: currentFileNames;
-QJsonArray* CurrentPoint:: currentAllFiles;
+//QJsonArray* CurrentPoint:: currentAllFiles;
 
 CurrentPoint::CurrentPoint(QSettings *settings, QObject *parent):HttpRequestHandler (parent)
 {
@@ -23,8 +23,8 @@ CurrentPoint::CurrentPoint(QSettings *settings, QObject *parent):HttpRequestHand
     if(currentFileNames != nullptr){
     }else{ currentFileNames= new QJsonObject (); }
 
-    if(currentAllFiles != nullptr){
-    }else{ currentAllFiles= new QJsonArray (); }
+//    if(currentAllFiles != nullptr){
+//    }else{ currentAllFiles= new QJsonArray (); }
 
     countObj++;
 }
@@ -51,10 +51,11 @@ void CurrentPoint::service(HttpRequest &request, HttpResponse &response)
     else if (path == "/vf/allFile") {
         // читаем все файлы в директории
         QStringList list = sortDateList (getFilesList ( "*.dat"));
+       QJsonArray currentAllFiles;
         for (int i = 0; i < list.count (); ++i) {
-            currentAllFiles->insert (i, "/" +  logFolder + "/" + list[i]);
+            currentAllFiles.insert (i, "/" +  logFolder + "/" + list[i]);
         }
-        tempDoc.setArray (*currentAllFiles);
+        tempDoc.setArray (currentAllFiles);
         response.write(tempDoc.toJson() ,true);
     }
     else if (path == "/vf/listFile") {
