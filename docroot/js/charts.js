@@ -45,6 +45,14 @@ function idSearch(stringForSearch, fullReturn = false) {
  */
 var hendlerClickTable = function (event) {
   console.log(event);
+  if (event.target.localName == 'select') {
+    let idObj = idSearch(event.target.id, true); 
+    console.log(idObj);
+  }else if (event.target.localName == 'checkbox') {
+    
+  }else{
+
+  }
 };
 
 /**
