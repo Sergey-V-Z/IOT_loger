@@ -6,7 +6,6 @@ int CurrentPoint::countObj;
 QJsonObject* CurrentPoint:: currentJSON;
 QJsonObject* CurrentPoint:: currentSettings;
 QJsonObject* CurrentPoint:: currentFileNames;
-//QJsonArray* CurrentPoint:: currentAllFiles;
 
 CurrentPoint::CurrentPoint(QSettings *settings, QObject *parent):HttpRequestHandler (parent)
 {
@@ -22,9 +21,6 @@ CurrentPoint::CurrentPoint(QSettings *settings, QObject *parent):HttpRequestHand
 
     if(currentFileNames != nullptr){
     }else{ currentFileNames= new QJsonObject (); }
-
-//    if(currentAllFiles != nullptr){
-//    }else{ currentAllFiles= new QJsonArray (); }
 
     countObj++;
 }
@@ -87,14 +83,9 @@ void CurrentPoint::service(HttpRequest &request, HttpResponse &response)
         response.write("<br> <a href=\"/vf/listFile \">List log Files<a> ");
         response.write("<br> <a href=\"/vf/allFile\">All Files in dir<a> ");
         response.write("<br> <a href=\"/vf/updateSet\">Update settings sensors<a> ");
-
-        //        response.write("<br> <a href=\"/vf/settings \">settings<a> ");
         response.write("</body></html>",true);
 
     }
-    //    QByteArray str = "not point, ";
-    //    str += QByteArray::number(countObj);
-
 
 }
 

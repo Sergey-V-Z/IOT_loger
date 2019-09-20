@@ -10,6 +10,7 @@ var setcharts = document.getElementById("setcharts"),
 selectsTable.className = "tableCharts";
 var logData;
 var currentPoint, currentSettings;
+var charts = {};
 //var selects = [];
 
 
@@ -17,6 +18,10 @@ var currentPoint, currentSettings;
  * Ищет с в строке id=nnn n-цифры и возврощает цыфру из id
  * @param {Где искать} stringForSearch
  * @param {Тип возврощаемых данных} fullReturn
+ * @returns{string:"id=n",
+ *          number:n} 
+ *          or 
+ *          number:n
  */
 function idSearch(stringForSearch, fullReturn = false) {
 
@@ -44,13 +49,43 @@ function idSearch(stringForSearch, fullReturn = false) {
  * Обработчик кликов по таблице настроек
  */
 var hendlerClickTable = function (event) {
+  let idObj;
+  // если элеметн содержит id то выделяем из него обший id=цифра
   console.log(event);
-  if (event.target.localName == 'select') {
-    let idObj = idSearch(event.target.id, true); 
-    console.log(idObj);
-  }else if (event.target.localName == 'checkbox') {
-    
-  }else{
+  if (event.target.id != "") {
+    idObj = idSearch(event.target.id, true);
+  } else {
+    console.log("event.target.id is empty");
+    return;
+  }
+
+  // получаем нужные елементы
+  let checkBox = document.getElementById("c-" + idObj.string),
+    chartDiv = document.getElementById("id" + idObj.number);
+
+  // выполняем действия в зависимости от элемента на котором было нажатие
+  if (event.target.type == 'select-one') {
+    let request = new XMLHttpRequest();
+    request.open('GET', event.target.value);
+    request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+    request.onreadystatechange = function () {
+      if (request.readyState === 4) {
+        if (request.status == 200 && request.status < 300) {
+          charts[idObj.string].data = JSON.parse('[' + request.responseText + ']');
+        } else {
+
+        }
+      }
+    };
+    request.send();
+  } else if (event.target.type == 'checkbox') {
+    if (event.target.checked == true) {
+      chartDiv.parentElement.style = "";
+    } else {
+      chartDiv.parentElement.style = "display:none";
+    }
+
+  } else {
 
   }
 };
@@ -97,6 +132,7 @@ function handlerListFiles(params) {
         cellID = document.createElement("td"),
         checkBox = document.createElement('input');
       checkBox.type = 'checkbox';
+      checkBox.checked = true;
       let select = document.createElement("select");
       select.className = "listfiles";
 
@@ -239,7 +275,6 @@ function getDescriptions(storage) {
  */
 function drawing(dataForCharts = {}) {
   console.log(dataForCharts);
-  let charts = {};
 
   for (const key in dataForCharts.storage) {
     if (dataForCharts.storage.hasOwnProperty(key)) {
