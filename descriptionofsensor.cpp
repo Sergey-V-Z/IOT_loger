@@ -45,7 +45,10 @@ bool DescriptionOfSensor::setDescription(QByteArray rawJSON)
         qWarning() << "in function (setDescription): settableObj is empty ";
         return false;
     }
-    description = newValidJSON;
+    QStringList newKeys = newValidJSON.keys ();
+    for (int i = 0; i < newKeys.length (); ++i) {
+        description.insert (newKeys[i], newValidJSON[newKeys[i]]);
+    }
 
     //записываем проверенный объект в descriptionSensors
     QStringList keysObj = newValidJSON.keys ();
@@ -57,7 +60,7 @@ bool DescriptionOfSensor::setDescription(QByteArray rawJSON)
     QFile descriptFile(path);
     descriptFile.remove ();
     descriptFile.open (QFile::WriteOnly);
-    QJsonDocument docJSON(newValidJSON);
+    QJsonDocument docJSON(description);
     descriptFile.write (docJSON.toJson ());
     descriptFile.close ();
     return true;
@@ -107,13 +110,19 @@ void DescriptionOfSensor::getDataFromFile(QString path)
 // проверка на наличие обязательных ключей
 bool DescriptionOfSensor::valadateDescriptJSON(QJsonObject verifiedJSON)
 {
-    if(verifiedJSON.contains ("name") and verifiedJSON.contains ("keys") ){
+    if(verifiedJSON.contains ("name") and verifiedJSON.contains ("keys")and verifiedJSON.contains ("alias") ){
         if (!verifiedJSON["name"].isString ()) {
             return false;
         }
         if (!verifiedJSON["keys"].isArray ()) {
             return false;
         }
+        if (!verifiedJSON["alias"].isObject ()) {
+            return false;
+        }
+
+        QJsonObject alias = verifiedJSON["alias"].toObject ();
+        QStringList keysAlias = alias.keys ();
         QJsonArray tempArrJSON = verifiedJSON["keys"].toArray ();
         //проверяем в цикле содержание ключей в обектах
         for (int i = 0; i < tempArrJSON.count (); ++i) {
@@ -123,6 +132,11 @@ bool DescriptionOfSensor::valadateDescriptJSON(QJsonObject verifiedJSON)
                 return  false;
             }
             QJsonObject tempVal = tempArrJSON[i].toObject ();
+            QStringList keysVal = tempVal.keys ();
+            if(keysVal != keysAlias){
+                qCritical() << "in function (valadateDescriptJSON), keys valye != keys alias";
+                return  false;
+            }
             // если в элементе нет ключа
             if (!tempVal.contains ("name")){
                 qCritical() << "in function (valadateDescriptJSON), Obj in arrey 'keys' not contains necessary key 'name'";

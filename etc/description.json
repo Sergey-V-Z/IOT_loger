@@ -1,8 +1,17 @@
 {
     "id=1": {
+        "alias": {
+            "color": "Color",
+            "display": "",
+            "first": "",
+            "max": "",
+            "min": "",
+            "name": "",
+            "userName": "User name"
+        },
         "keys": [
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": false,
                 "max": null,
@@ -11,7 +20,7 @@
                 "userName": ""
             },
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": false,
                 "max": null,
@@ -20,7 +29,7 @@
                 "userName": ""
             },
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": true,
                 "max": null,
@@ -29,7 +38,7 @@
                 "userName": ""
             },
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": false,
                 "max": null,
@@ -38,7 +47,7 @@
                 "userName": ""
             },
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": false,
                 "max": null,
@@ -47,7 +56,7 @@
                 "userName": ""
             },
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": false,
                 "max": null,
@@ -56,7 +65,7 @@
                 "userName": ""
             },
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": false,
                 "max": null,
@@ -65,7 +74,7 @@
                 "userName": ""
             },
             {
-                "color": "",
+                "color": "#000000",
                 "display": false,
                 "first": false,
                 "max": null,
@@ -74,12 +83,21 @@
                 "userName": ""
             }
         ],
-        "name": "UPS"
+        "name": "  UPS  "
     },
     "id=10": {
+        "alias": {
+            "color": "",
+            "display": "",
+            "first": "",
+            "max": "",
+            "min": "",
+            "name": "",
+            "userName": ""
+        },
         "keys": [
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": true,
                 "max": null,
@@ -88,7 +106,7 @@
                 "userName": ""
             },
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": false,
                 "max": null,
@@ -97,7 +115,7 @@
                 "userName": ""
             },
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": false,
                 "max": null,
@@ -106,7 +124,7 @@
                 "userName": ""
             },
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": false,
                 "max": null,
@@ -115,12 +133,21 @@
                 "userName": ""
             }
         ],
-        "name": "TestSensor"
+        "name": " TestSensor "
     },
     "id=2": {
+        "alias": {
+            "color": "",
+            "display": "",
+            "first": "",
+            "max": "",
+            "min": "",
+            "name": "",
+            "userName": ""
+        },
         "keys": [
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": false,
                 "max": null,
@@ -129,7 +156,7 @@
                 "userName": ""
             },
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": false,
                 "max": null,
@@ -138,7 +165,7 @@
                 "userName": ""
             },
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": false,
                 "max": null,
@@ -147,7 +174,7 @@
                 "userName": ""
             },
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": false,
                 "max": null,
@@ -156,7 +183,7 @@
                 "userName": ""
             },
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": true,
                 "max": null,
@@ -165,7 +192,7 @@
                 "userName": ""
             },
             {
-                "color": "",
+                "color": "#000000",
                 "display": true,
                 "first": false,
                 "max": 4.2,
@@ -174,6 +201,6 @@
                 "userName": ""
             }
         ],
-        "name": "Meteo"
+        "name": " Meteo "
     }
 }

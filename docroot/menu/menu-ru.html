@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
-    <link rel="stylesheet" href="/css/menu.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/menu.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     {head}
     <script src="/js/menu.js"></script>
 
@@ -17,10 +19,10 @@
     <div class="topnav" id="Topnav">
         <!-- class="active" -->
         <a id="menu"></a>
-        <a href="/menu/index" id="index">Данные</a>
-        <a href="/menu/charts" id="charts">Графики</a>
-        <a href="/menu/settings" id="settings">Настройки</a>
-        <a href="/menu/control" id="control">Управление</a>
+        <a href="/menu/index" class="itemMenu" id="index">Данные</a>
+        <a href="/menu/charts" class="itemMenu" id="charts">Графики</a>
+        <a href="/menu/settings" class="itemMenu" id="settings">Настройки</a>
+        <a href="/menu/control" class="itemMenu" id="control">Управление</a>
         <a href="/login.html?setuser=logout">Logout</a>
 
         <!-- <a href="/menu/2" id="2">2</a> -->
@@ -29,7 +31,13 @@
         </a>
     </div>
     {page}
-    <footer id="footer"><div id="footdiv"></div></footer>
+    <div id="footerDiv"></div>
+    <footer id="footer">
+        <div id="footdiv"></div>
+    </footer>
+    <script src="/jquery/jquery-3.4.1.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

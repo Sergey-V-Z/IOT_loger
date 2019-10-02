@@ -51,11 +51,20 @@ document.addEventListener('DOMContentLoaded', function () {
         path = url.split('/'),
         count = path.length;
 
-    let itemMenu = document.getElementById(path[count - 1]),
+    let lastItemURL = path[count - 1],
         menu = document.getElementById("menu");
 
     // let main = document.getElementsByClassName("main")[0];
-
+    let nameMenu;
+    let itemsMenu = document.getElementsByClassName("itemMenu");
+    for (let i = 0; i < itemsMenu.length; i++) {
+        const element = itemsMenu[i].id;
+        if(lastItemURL.includes(element)){
+            nameMenu = element;
+            break;
+        }  
+    }
+    let itemMenu = document.getElementById(nameMenu);
     menu.innerHTML = itemMenu.innerHTML;
     itemMenu.classList.add("active");
 
