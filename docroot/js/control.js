@@ -1,75 +1,33 @@
-document.addEventListener('DOMContentLoaded', function () {
-
-    $.ajax({
-            url: '/data/deskript',
-            type: 'GET',
-            dataType: 'json',
-
-        })
-        .done(function (json) {
-            createTables(json);
-        })
-        .fail(function (xhr, status, errorThrown) {
-            alert("Sorry, there was a problem!");
-            console.log("Error: " + errorThrown);
-            console.log("Status: " + status);
-            console.dir(xhr);
-        })
-        .always(function (xhr, status) {});
-});
-
 /**
- * Обработчик отправки описания данных от сенсоров
- * @param {*} event 
+ * Переменные
+ * 
  */
-function handlerSendDescription(event) {
-    console.log(event);
+var descriptionJSON = {};
 
-
-    //ищим все таблицы
-    let tbl = document.getElementById(event.target.name);
-    let json = {};
-
-    let tempObj = getDataFromTable(tbl);
-    let keys = Object.keys(tempObj);
-    json[keys[0]] = tempObj[keys[0]];
-
-
-    //отправка данных
-    let send = JSON.stringify(json);
-    $.ajax({
-            url: '/data/deskript',
-            type: 'POST',
-            data: send,
-        })
-        .done(function (json) {
-            console.log("ok");
-        })
-        .fail(function (xhr, status, errorThrown) {
-            alert("Sorry, there was a problem!");
-            console.log("Error: " + errorThrown);
-            console.log("Status: " + status);
-            console.dir(xhr);
-        })
-        .always(function (xhr, status) {});
-
-
-}
 
 /**
- * Создает таблицу из данных в обекте
+ * Создает таблицу дескрипьора из данных в обекте и устанааливает ее в parent
  * @param {Обект описания одного сенсора} object 
  * @param {строка содержащая технический id=* } id
+ * @param {элемент страници для размешения таблицы} idParent
  */
-function createTable(object = {}, id = "") {
+
+
+function createTable(object = {}, id = "", idParent = "") {
     if (object == {}) {
+        return null;
+    }
+    if (idParent == "") {
+        return null;
+    }
+    if (id == "") {
         return null;
     }
 
     let objectsArray = object.keys,
         lengthArray = objectsArray.length,
         nameTable = object.name,
-        mainDiv = document.getElementById('main');
+        mainDiv = document.getElementById(idParent);
 
     //создаем элементы
     let skrollDiv = document.createElement('div'),
@@ -99,7 +57,7 @@ function createTable(object = {}, id = "") {
     divCol.className = "col-sm-12 col-md-12";
     buttonSend.className = "btn btn-primary";
     buttonSend.name = id;
-    buttonSend.innerHTML = "Send";
+    buttonSend.innerHTML = "Save";
     buttonSend.addEventListener('click', handlerSendDescription);
 
     //Создание заголовков
@@ -218,7 +176,7 @@ function createTables(object = {}) {
     for (const key in object) {
         if (object.hasOwnProperty(key)) {
             const element = object[key];
-            createTable(element, key);
+            createTable(element, key, "description");
         }
     }
 }
@@ -278,12 +236,49 @@ function getDataFromTable(tableElement) {
 }
 
 /**
- * Полусает из таблицы данные и возврошает их в JSON формате
- * @returns{JSON objeckt}
+ * Обработчик отправки одного дескриптора
+ * @param {*} event 
  */
-function getDataFromTables() {
+function handlerSendDescription(event) {
+    console.log(event);
+
+
     //ищим все таблицы
-    let tbl = $('table');
+    let tbl = document.getElementById(event.target.name);
+    let json = {};
+
+    let tempObj = getDataFromTable(tbl);
+    let keys = Object.keys(tempObj);
+    json[keys[0]] = tempObj[keys[0]];
+
+
+    //отправка данных
+    let send = JSON.stringify(json);
+    $.ajax({
+            url: '/data/deskript',
+            type: 'POST',
+            data: send,
+        })
+        .done(function (json) {
+            console.log("ok");
+        })
+        .fail(function (xhr, status, errorThrown) {
+            alert("Sorry, there was a problem!");
+            console.log("Error: " + errorThrown);
+            console.log("Status: " + status);
+            console.dir(xhr);
+        })
+        .always(function (xhr, status) {});
+
+
+}
+
+/**
+ * Обработчик отправки всех дескрипторов
+ */
+function handlerSendTables() {
+    //ищим все таблицы
+    let tbl = $('table.description');
     let json = {};
 
     for (let i = 0; i < tbl.length; i++) {
@@ -311,3 +306,154 @@ function getDataFromTables() {
         })
         .always(function (xhr, status) {});
 }
+
+/**
+ * Обработчик создания нового дескриптора
+ * @param {} event
+ */
+function addNewDeskription(event) {
+
+    if (event.target.id == "addTable") {
+        let inputs = $('input', event.currentTarget);
+
+        let id = "id=",
+            nameTable = "",
+            countParam,
+            alert = false,
+            newDeskription = {};
+
+        let rxId = /^id=\d{1,2}$/,
+            rxName = /^[a-zA-Z]{1,20}$/,
+            rxcountParam = /^\d{1,2}$/;
+
+        for (let i = 0; i < inputs.length; i++) {
+            const element = inputs[i];
+
+            if (element.name == "countParam") {
+                countParam = element.value;
+                if (rxcountParam.test(countParam)) {
+                    element.className = "form-control";
+                } else {
+                    element.className += " alert alert-danger";
+                    alert = true;
+                }
+
+            } else if (element.name == "idNum") {
+                id += element.value;
+                if (rxId.test(id)) {
+                    element.className = "form-control";
+                } else {
+                    element.className += " alert alert-danger";
+                    alert = true;
+                }
+
+            } else if (element.name == "tableName") {
+                nameTable = element.value;
+                if (rxName.test(nameTable)) {
+                    element.className = "form-control";
+                } else {
+                    element.className += " alert alert-danger";
+                    alert = true;
+                }
+
+            }
+
+        }
+        if (!alert) {
+            //создаем обект и вызываем создание таблицы
+            let keys = Object.keys(descriptionJSON);
+            let tAlias = descriptionJSON[keys[0]].alias;
+            let tKeys = descriptionJSON[keys[0]].keys[0];
+
+            /**
+             * Создание шаблонов
+             */
+            // чистим алеасы
+            for (const key in tAlias) {
+                if (tAlias.hasOwnProperty(key)) {
+                    tAlias[key] = "";
+                }
+            }
+
+            // создаем шаблон для ключей
+            for (const key in tKeys) {
+                if (tKeys.hasOwnProperty(key)) {
+                    const element = tKeys[key];
+                    switch (typeof (element)) {
+                        case 'string':
+                            tKeys[key] = '';
+                            break;
+                        case 'boolean':
+                            tKeys[key] = false;
+                            break;
+                        case 'object':
+                            tKeys[key] = null;
+                            break;
+                        case 'number':
+                            tKeys[key] = null;
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
+            }
+
+            // создаем ключи
+            let arrKeys = [];
+            for (let i = 0; i < +countParam; i++) {
+                arrKeys.push(tKeys);
+            }
+
+            newDeskription = {
+                alias: tAlias,
+                tkeys: tKeys,
+                keys: arrKeys,
+                name: nameTable
+            };
+            createTable(newDeskription, id, "addDescription");
+            $('#myModalBox').modal('hide');
+        }
+
+    } else {
+        event.target.className = "form-control";
+    }
+
+}
+
+// удаление дескриптора
+function deletDeskription(id) {
+    
+}
+// Начало начал 
+document.addEventListener('DOMContentLoaded', function () {
+
+    $.ajax({
+            url: '/data/deskript',
+            type: 'GET',
+            dataType: 'json',
+
+        })
+        .done(function (json) {
+            descriptionJSON = json;
+            createTables(json);
+        })
+        .fail(function (xhr, status, errorThrown) {
+            alert("Sorry, there was a problem!");
+            console.log("Error: " + errorThrown);
+            console.log("Status: " + status);
+            console.dir(xhr);
+        })
+        .always(function (xhr, status) {});
+
+    let saveAll = document.getElementById("saveAll");
+    saveAll.addEventListener('click', handlerSendTables);
+
+    let addNew = document.getElementById("addNew");
+    addNew.addEventListener('click', function () {
+        $("#myModalBox").modal('show');
+    });
+
+    document.getElementById("myModalBox").addEventListener('click', addNewDeskription);
+
+});

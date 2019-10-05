@@ -63,6 +63,7 @@ bool DescriptionOfSensor::setDescription(QByteArray rawJSON)
     QJsonDocument docJSON(description);
     descriptFile.write (docJSON.toJson ());
     descriptFile.close ();
+    refresh ();
     return true;
 }
 

@@ -13,7 +13,7 @@ window.onload = function () {
             // таблица для обекта
             let table = document.createElement("table"),
                 tbody = document.createElement('tbody');
-                table.className = "sensor";
+                table.className = "table table-bordered sensor";
             if (objPoint.hasOwnProperty(key)) {
 
                 table.innerHTML = "<caption><p>" + key + "</p></caption>";

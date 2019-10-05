@@ -83,7 +83,7 @@
                 "userName": ""
             }
         ],
-        "name": "  UPS  "
+        "name": "        UPS        "
     },
     "id=10": {
         "alias": {
@@ -133,7 +133,7 @@
                 "userName": ""
             }
         ],
-        "name": " TestSensor "
+        "name": "       TestSensor       "
     },
     "id=2": {
         "alias": {
@@ -201,6 +201,65 @@
                 "userName": ""
             }
         ],
-        "name": " Meteo "
+        "name": "       Meteo       "
+    },
+    "id=3": {
+        "alias": {
+            "color": "",
+            "display": "",
+            "first": "",
+            "max": "",
+            "min": "",
+            "name": "Name",
+            "userName": ""
+        },
+        "keys": [
+            {
+                "color": "#e4d4d4",
+                "display": true,
+                "first": false,
+                "max": 0,
+                "min": 5,
+                "name": "f",
+                "userName": "Finish"
+            },
+            {
+                "color": "#000000",
+                "display": true,
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "g",
+                "userName": ""
+            },
+            {
+                "color": "#c95c5c",
+                "display": true,
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "h",
+                "userName": ""
+            },
+            {
+                "color": "#1d8c29",
+                "display": true,
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "j",
+                "userName": ""
+            },
+            {
+                "color": "#3853ac",
+                "display": false,
+                "first": false,
+                "max": null,
+                "min": null,
+                "name": "k",
+                "userName": ""
+            }
+        ],
+        "name": " Room "
     }
 }

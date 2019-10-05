@@ -1,15 +1,53 @@
 <div class="main" id="main">
 
-    
-    <!-- <div class="row-no-gutters">
+    <div class="row-no-gutters">
         <div class="col-sm-1 col-md-1">
-            <button class="btn btn-primary">Button</button><button class="btn btn-default">Button</button>
+            <button class="btn btn-primary" id="saveAll">Save All</button>
         </div>
         <div class="col-sm-1 col-md-1">
-            <button class="btn btn-primary">Button</button><button class="btn btn-default">Button</button>
+            <button class="btn btn-primary" id="addNew">Add description</button>
         </div>
-    </div> -->
-    <!-- <hr class="line"> -->
+
+    </div>
+    <hr class="line">
+
+    <div id="settings">
+
+    </div>
+
+    <div id="addDescription">
+
+    </div>
+
+    <div id="description">
+
+    </div>
+
+    <div id="myModalBox" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Заголовок модального окна -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Добавте данные нового датчика</h4>
+                </div>
+                <!-- Основное содержимое модального окна -->
+                <div class="modal-body">
+                    <p><label for="countParam">Количество параметров</label><input class="form-control"
+                            name="countParam" type="number" min="0" max="100" step="1" placeholder="5"></p>
+                    <p><label for="idNum">Номер id</label><input class="form-control" name="idNum" type="number" min="0"
+                            max="100" step="1" placeholder="12"></p>
+                    <p><label for="tableName">Имя сенсора</label><input class="form-control" name="tableName"
+                            type="text" placeholder="Meteo"></p>
+                </div>
+                <!-- Футер модального окна -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary" id="addTable">Добавить</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
 <script src="/js/control.js"></script>
