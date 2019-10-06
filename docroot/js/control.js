@@ -50,15 +50,29 @@ function createTable(object = {}, id = "", idParent = "") {
 
     // Создание и астройка кнопки
     let divRow = document.createElement('div'),
-        divCol = document.createElement('div'),
-        buttonSend = document.createElement('button');
+        divCol1 = document.createElement('div'),
+        divCol2 = document.createElement('div'),
+        buttonSend = document.createElement('button'),
+        buttonDelet = document.createElement('button');
 
     divRow.className = "row-no-gutters";
-    divCol.className = "col-sm-12 col-md-12";
+    divCol1.className = "col-sm-1 col-md-1";
+    divCol1.className = "col-sm-1 col-md-1";
     buttonSend.className = "btn btn-primary";
     buttonSend.name = id;
     buttonSend.innerHTML = "Save";
     buttonSend.addEventListener('click', handlerSendDescription);
+    
+    buttonDelet.className = "btn btn-default";
+    buttonDelet.name = id;
+    buttonDelet.innerHTML = "Delet";
+    buttonDelet.addEventListener('click', deletDeskription);
+
+    // собираем панельку кнопок
+    divCol1.append(buttonDelet);
+    divCol2.append(buttonSend);
+    divRow.append(divCol1);
+    divRow.append(divCol2);
 
     //Создание заголовков
     let alias = object.alias;
@@ -160,7 +174,7 @@ function createTable(object = {}, id = "", idParent = "") {
         table.append(tbody);
         skrollDiv.append(table);
         divConteiner.append(skrollDiv);
-        divConteiner.append(buttonSend);
+        divConteiner.append(divRow);
         mainDiv.append(divConteiner);
         mainDiv.append(hrLine);
 
@@ -236,7 +250,7 @@ function getDataFromTable(tableElement) {
 }
 
 /**
- * Обработчик отправки одного дескриптора
+ * Обработчик сохронения одного дескриптора
  * @param {*} event 
  */
 function handlerSendDescription(event) {
@@ -274,7 +288,7 @@ function handlerSendDescription(event) {
 }
 
 /**
- * Обработчик отправки всех дескрипторов
+ * Обработчик сохронения всех дескрипторов
  */
 function handlerSendTables() {
     //ищим все таблицы
@@ -421,10 +435,34 @@ function addNewDeskription(event) {
 
 }
 
-// удаление дескриптора
-function deletDeskription(id) {
-    
+/**
+ * Удаление Дескриптора
+ * @param {событие} event 
+ */
+function deletDeskription(event) {
+    console.log(event);
+    let id = event.target.name;
+    //отправка данных
+    let send = `delet:${id}`;
+    $.ajax({
+            url: '/data/deskript',
+            type: 'POST',
+            data: send,
+        })
+        .done(function (json) {
+            // удалить таблицу 
+            console.log("ok");
+        })
+        .fail(function (xhr, status, errorThrown) {
+            alert("Sorry, there was a problem!");
+            console.log("Error: " + errorThrown);
+            console.log("Status: " + status);
+            console.dir(xhr);
+        })
+        .always(function (xhr, status) {});
+
 }
+
 // Начало начал 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -446,9 +484,11 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .always(function (xhr, status) {});
 
+    // кнопка сохранение всех дескрипторов
     let saveAll = document.getElementById("saveAll");
     saveAll.addEventListener('click', handlerSendTables);
 
+    // кнопка добавление дескриптора
     let addNew = document.getElementById("addNew");
     addNew.addEventListener('click', function () {
         $("#myModalBox").modal('show');

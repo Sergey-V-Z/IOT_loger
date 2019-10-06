@@ -85,56 +85,6 @@
         ],
         "name": "        UPS        "
     },
-    "id=10": {
-        "alias": {
-            "color": "",
-            "display": "",
-            "first": "",
-            "max": "",
-            "min": "",
-            "name": "",
-            "userName": ""
-        },
-        "keys": [
-            {
-                "color": "#000000",
-                "display": true,
-                "first": true,
-                "max": null,
-                "min": null,
-                "name": "t1",
-                "userName": ""
-            },
-            {
-                "color": "#000000",
-                "display": true,
-                "first": false,
-                "max": null,
-                "min": null,
-                "name": "T2",
-                "userName": ""
-            },
-            {
-                "color": "#000000",
-                "display": true,
-                "first": false,
-                "max": null,
-                "min": null,
-                "name": "a3",
-                "userName": ""
-            },
-            {
-                "color": "#000000",
-                "display": true,
-                "first": false,
-                "max": null,
-                "min": null,
-                "name": "A4",
-                "userName": ""
-            }
-        ],
-        "name": "       TestSensor       "
-    },
     "id=2": {
         "alias": {
             "color": "",

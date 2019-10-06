@@ -45,15 +45,12 @@ bool DescriptionOfSensor::setDescription(QByteArray rawJSON)
         qWarning() << "in function (setDescription): settableObj is empty ";
         return false;
     }
+
+    //записываем проверенный объект
     QStringList newKeys = newValidJSON.keys ();
     for (int i = 0; i < newKeys.length (); ++i) {
         description.insert (newKeys[i], newValidJSON[newKeys[i]]);
-    }
-
-    //записываем проверенный объект в descriptionSensors
-    QStringList keysObj = newValidJSON.keys ();
-    for (int i = 0; i < keysObj.size (); ++i) {
-        descriptionSensors.insert (keysObj[i], newValidJSON[keysObj[i]].toObject ());
+        descriptionSensors.insert (newKeys[i], newValidJSON[newKeys[i]].toObject ());
     }
 
     //записать описание в файл
@@ -62,6 +59,30 @@ bool DescriptionOfSensor::setDescription(QByteArray rawJSON)
     descriptFile.open (QFile::WriteOnly);
     QJsonDocument docJSON(description);
     descriptFile.write (docJSON.toJson ());
+    descriptFile.close ();
+    refresh ();
+    return true;
+}
+
+bool DescriptionOfSensor::deletDescription(QString id)
+{
+    if (!description.contains (id) or !descriptionSensors.contains (id)) {
+        return false;
+    }
+
+    description.remove (id);
+    descriptionSensors.remove (id);
+
+    //записать описание в файл
+    QFile descriptFile(path);
+    descriptFile.remove ();
+    descriptFile.open (QFile::WriteOnly);
+    QJsonDocument docJSON(description);
+    if (descriptFile.write (docJSON.toJson ()) == -1) {
+        qCritical() << "error write filr:"<< path;
+        descriptFile.close ();
+        return false;
+    }
     descriptFile.close ();
     refresh ();
     return true;

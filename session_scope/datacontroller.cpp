@@ -15,12 +15,24 @@ void DataController::service(HttpRequest &request, HttpResponse &response, Descr
             response.write (docJSON.toJson (),true);
 
         }else if (method  == "POST") {
-            if(descriptSensors->setDescription (request.getBody ())){
-                response.setStatus (202, "OK");
-                response.write ("");
-            }else {
-                response.setStatus (406, "Not Acceptable");
-                response.write ("");
+            QByteArrayList  cmdList =  request.getBody ().split (':');
+            if (cmdList[0] == "delet") {
+
+                if(descriptSensors->deletDescription (cmdList[1])){
+                    response.setStatus (202, "OK");
+                    response.write ("");
+                }else {
+                    response.setStatus (406, "Not Acceptable");
+                    response.write ("");
+                }
+            } else {
+                if(descriptSensors->setDescription (request.getBody ())){
+                    response.setStatus (202, "OK");
+                    response.write ("");
+                }else {
+                    response.setStatus (406, "Not Acceptable");
+                    response.write ("");
+                }
             }
 
         }

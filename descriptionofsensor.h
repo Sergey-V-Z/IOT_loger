@@ -24,6 +24,8 @@ public:
     QJsonObject getDescriptionsFileJSON();
     // установка нового описания сенсора или сенсоров приномает  JSON в текстовом формате
     bool setDescription(QByteArray rawJSON);
+    // удаление
+    bool deletDescription(QString id);
     // обновляет данные читая их из файла
     void refresh();
 private:
