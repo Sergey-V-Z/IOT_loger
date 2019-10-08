@@ -41,12 +41,14 @@ function createTable(object = {}, id = "", idParent = "") {
         hrLine = document.createElement('hr');
 
     hrLine.className = "line";
-    caption.innerHTML = `<h> ${nameTable} </h>`;
-    skrollDiv.className = "scroll-container";
+    caption.innerHTML = `<h3> ${nameTable} </h3>`;
+    caption.classList += "text-center";
+    skrollDiv.className = "table-responsive-sm";
     table.className = "table table-bordered description";
     table.id = id;
     trHead.id = "heads";
     trAlias.id = "alias";
+    divConteiner.id = id.replace(/=/, ''); // удаляем символ и записывваем значение в id
 
     // Создание и астройка кнопки
     let divRow = document.createElement('div'),
@@ -62,7 +64,7 @@ function createTable(object = {}, id = "", idParent = "") {
     buttonSend.name = id;
     buttonSend.innerHTML = "Save";
     buttonSend.addEventListener('click', handlerSendDescription);
-    
+
     buttonDelet.className = "btn btn-default";
     buttonDelet.name = id;
     buttonDelet.innerHTML = "Delet";
@@ -175,8 +177,8 @@ function createTable(object = {}, id = "", idParent = "") {
         skrollDiv.append(table);
         divConteiner.append(skrollDiv);
         divConteiner.append(divRow);
+        divConteiner.append(hrLine);
         mainDiv.append(divConteiner);
-        mainDiv.append(hrLine);
 
     }
 }
@@ -273,14 +275,19 @@ function handlerSendDescription(event) {
             type: 'POST',
             data: send,
         })
-        .done(function (json) {
-            console.log("ok");
+        .done(function (json, status) {
+            console.log(json);
+            console.log(status);
         })
         .fail(function (xhr, status, errorThrown) {
-            alert("Sorry, there was a problem!");
-            console.log("Error: " + errorThrown);
-            console.log("Status: " + status);
-            console.dir(xhr);
+            if (xhr.status == 401) {
+                $(location).attr('href', xhr.responseText);
+            } else {
+                alert("Sorry, there was a problem!");
+                console.log("Error: " + errorThrown);
+                console.log("Status: " + status);
+                console.dir(xhr);
+            }
         })
         .always(function (xhr, status) {});
 
@@ -313,10 +320,14 @@ function handlerSendTables() {
             console.log("ok");
         })
         .fail(function (xhr, status, errorThrown) {
-            alert("Sorry, there was a problem!");
-            console.log("Error: " + errorThrown);
-            console.log("Status: " + status);
-            console.dir(xhr);
+            if (xhr.status == 401) {
+                $(location).attr('href', xhr.responseText);
+            } else {
+                alert("Sorry, there was a problem!");
+                console.log("Error: " + errorThrown);
+                console.log("Status: " + status);
+                console.dir(xhr);
+            }
         })
         .always(function (xhr, status) {});
 }
@@ -442,8 +453,9 @@ function addNewDeskription(event) {
 function deletDeskription(event) {
     console.log(event);
     let id = event.target.name;
-    //отправка данных
+
     let send = `delet:${id}`;
+
     $.ajax({
             url: '/data/deskript',
             type: 'POST',
@@ -451,13 +463,19 @@ function deletDeskription(event) {
         })
         .done(function (json) {
             // удалить таблицу 
-            console.log("ok");
+            $(`#${id.replace(/=/,'')}`).remove();
+            // console.log("ok");
+            window.setMessageFooter("Deleted");
         })
         .fail(function (xhr, status, errorThrown) {
-            alert("Sorry, there was a problem!");
-            console.log("Error: " + errorThrown);
-            console.log("Status: " + status);
-            console.dir(xhr);
+            if (xhr.status == 401) {
+                $(location).attr('href', xhr.responseText);
+            } else {
+                alert("Sorry, there was a problem!");
+                console.log("Error: " + errorThrown);
+                console.log("Status: " + status);
+                console.dir(xhr);
+            }
         })
         .always(function (xhr, status) {});
 
@@ -477,10 +495,14 @@ document.addEventListener('DOMContentLoaded', function () {
             createTables(json);
         })
         .fail(function (xhr, status, errorThrown) {
-            alert("Sorry, there was a problem!");
-            console.log("Error: " + errorThrown);
-            console.log("Status: " + status);
-            console.dir(xhr);
+            if (xhr.status == 401) {
+                $(location).attr('href', xhr.responseText);
+            } else {
+                alert("Sorry, there was a problem!");
+                console.log("Error: " + errorThrown);
+                console.log("Status: " + status);
+                console.dir(xhr);
+            }
         })
         .always(function (xhr, status) {});
 

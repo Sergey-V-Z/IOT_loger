@@ -51,7 +51,7 @@ function idSearch(stringForSearch, fullReturn = false) {
 var hendlerClickTable = function (event) {
   let idObj;
   // если элеметн содержит id то выделяем из него обший id=цифра
-  console.log(event);
+  // console.log(event);
   if (event.target.id != "") {
     idObj = idSearch(event.target.id, true);
   } else {
@@ -65,19 +65,33 @@ var hendlerClickTable = function (event) {
 
   // выполняем действия в зависимости от элемента на котором было нажатие
   if (event.target.type == 'select-one') {
-    let request = new XMLHttpRequest();
-    request.open('GET', event.target.value);
-    request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-    request.onreadystatechange = function () {
-      if (request.readyState === 4) {
-        if (request.status == 200 && request.status < 300) {
-          charts[idObj.string].data = JSON.parse('[' + request.responseText + ']');
-        } else {
 
+    $.ajax({
+        url: event.target.value,
+        type: 'GET',
+      })
+      .done(function (respons) {
+        try {
+          charts[idObj.string].data = JSON.parse('[' + respons + ']');
+        } catch (e) {
+          window.setMessageFooter('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
         }
-      }
-    };
-    request.send();
+
+      })
+      .fail(function (xhr, status, errorThrown) {
+        if (xhr.status == 401) {
+          $(location).attr('href', xhr.responseText);
+        } else {
+          alert("Sorry, there was a problem!");
+          console.log("Error: " + errorThrown);
+          console.log("Status: " + status);
+          console.dir(xhr);
+        }
+      })
+      .always(function (xhr, status) {
+        // console.log(xhr);
+      });
+
   } else if (event.target.type == 'checkbox') {
     if (event.target.checked == true) {
       chartDiv.parentElement.style = "";
@@ -96,7 +110,12 @@ var hendlerClickTable = function (event) {
  */
 function handlerListFiles(params) {
   let listID = {};
-  let arrFiles = JSON.parse(params);
+  let arrFiles;
+  try {
+    arrFiles = JSON.parse(params);
+  } catch (e) {
+    window.setMessageFooter('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
+  }
 
   if (arrFiles.length != 0) {
 
@@ -149,6 +168,7 @@ function handlerListFiles(params) {
           let Find = element.match(/[0-9]{2}.[0-9]{2}.[0-9]{2}/i);
           if (Find.length > 1) {
             console.log(`error name file: ${element}`);
+            window.setMessageFooter(`error name file: ${element}`);
             option.innerHTML = "err file name";
           } else {
             option.innerHTML = Find[0];
@@ -180,35 +200,42 @@ function uploadsFiles(fileNameArr = []) {
   let storFiles = {};
 
   return new Promise(function (resolve, reject) {
-    let request = new XMLHttpRequest();
-    request.open('GET', fileNameArr[i]);
-    request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-    request.onreadystatechange = function () {
-      if (request.readyState === 4) {
-        if (request.status == 200 && request.status < 300) {
-          let idStr = idSearch(fileNameArr[i], true);
-          storFiles[idStr.string] = {
-            "idNumber": idStr.number,
-            "idElementDOM": "id" + idStr.number,
-            "path": fileNameArr[i],
-            "data": '[' + request.responseText + ']'
-          };
-          if (i < n - 1) {
-            i++;
-            request.open('GET', fileNameArr[i]);
-            request.send();
-          } else {
-            // console.log(storFiles);
-            // start drawing
-            // createChart(JSON.parse(storFiles[fileNameArr[1]]));
-            resolve(storFiles);
-          }
-        } else {
-          reject();
-        }
+
+    function doneFunck(respons) {
+      let idStr = idSearch(fileNameArr[i], true);
+      storFiles[idStr.string] = {
+        "idNumber": idStr.number,
+        "idElementDOM": "id" + idStr.number,
+        "path": fileNameArr[i],
+        "data": '[' + respons + ']'
+      };
+      if (i < n - 1) {
+        i++;
+        $.ajax({
+            url: fileNameArr[i],
+            type: 'GET',
+          })
+          .done(doneFunck)
+          .fail(failFunck)
+          .always(function (xhr, status) {});
+      } else {
+        resolve(storFiles);
       }
-    };
-    request.send();
+    }
+
+    function failFunck(xhr, status, errorThrown) {
+      reject(xhr);
+    }
+
+    $.ajax({
+        url: fileNameArr[i],
+        type: 'GET',
+      })
+      .done(doneFunck)
+      .fail(failFunck)
+      .always(function (xhr, status) {});
+
+
   });
 }
 
@@ -233,27 +260,33 @@ function loadingFileLog(params) {
  */
 function getDescriptions(storage) {
   return new Promise(function (resolve, reject) {
-    let request = new XMLHttpRequest();
-    request.open('GET', "/data/deskript");
-    request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-    request.onreadystatechange = function () {
-      if (request.readyState === 4) {
-        if (request.status == 200 && request.status < 300) {
-          let descripions = JSON.parse(request.responseText);
-          if (descripions === undefined) {
-            reject();
-          } else {
-            resolve({
-              "storage": storage,
-              "descripions": descripions
-            });
-          }
-        } else {
-          reject();
+    $.ajax({
+        url: "/data/deskript",
+        type: 'GET',
+      })
+      .done(function (respons) {
+        let descripions;
+        try {
+          descripions = JSON.parse(respons);
+        } catch (e) {
+          window.setMessageFooter('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
         }
-      }
-    };
-    request.send();
+
+        if (descripions === undefined) {
+          reject();
+        } else {
+          resolve({
+            "storage": storage,
+            "descripions": descripions
+          });
+        }
+      })
+      .fail(function (xhr, status, errorThrown) {
+        reject(xhr);
+      })
+      .always(function (xhr, status) {
+        // console.log(xhr);
+      });
   });
 }
 /** Отрисовка графиков
@@ -274,7 +307,7 @@ function getDescriptions(storage) {
  *   }
  */
 function drawing(dataForCharts = {}) {
-  console.log(dataForCharts);
+  // console.log(dataForCharts);
 
   for (const key in dataForCharts.storage) {
     if (dataForCharts.storage.hasOwnProperty(key)) {
@@ -290,9 +323,27 @@ function drawing(dataForCharts = {}) {
 
       divCont.appendChild(dataForCharts.storage[key].div);
       mainDiv.appendChild(divCont);
-      charts[key] = createChart(JSON.parse(dataForCharts.storage[key].data), dataForCharts.storage[key].idElementDOM, dataForCharts.descripions[key]);
+      try {
+        charts[key] = createChart(
+          JSON.parse(dataForCharts.storage[key].data), dataForCharts.storage[key].idElementDOM, dataForCharts.descripions[key]
+          );
+      } catch (e) {
+        window.setMessageFooter('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
+      }
+
     }
   }
+}
+/**
+ * 
+ */
+function handlerError(xhr) {
+  if (xhr.status == 401) {
+    $(location).attr('href', xhr.responseText);
+  } else {
+    alert("Sorry, there was a problem!");
+  }
+
 }
 /**
  * Запрос списка файлов и затем скачивание файлов логирования 
@@ -301,19 +352,35 @@ function getFilesList() {
 
   function postData() {
     return new Promise(function (resolve, reject) {
-      let requestList = new XMLHttpRequest();
-      requestList.open('GET', '/vf/allFile');
-      requestList.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-      requestList.onreadystatechange = function () {
-        if (requestList.readyState === 4) {
-          if (requestList.status == 200 && requestList.status < 300) {
-            resolve(requestList.responseText);
-          } else {
-            reject();
-          }
-        }
-      };
-      requestList.send();
+
+      // let requestList = new XMLHttpRequest();
+      // requestList.open('GET', '/vf/allFile');
+      // requestList.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+      // requestList.onreadystatechange = function () {
+      //   if (requestList.readyState === 4) {
+      //     if (requestList.status == 200 && requestList.status < 300) {
+      //       resolve(requestList.responseText);
+      //     } else {
+      //       reject(requestList);
+      //     }
+      //   }
+      // };
+      // requestList.send();
+
+      $.ajax({
+          url: '/vf/allFile',
+          type: 'GET',
+        })
+        .done(function (respons) {
+          resolve(respons);
+        })
+        .fail(function (xhr, status, errorThrown) {
+          reject(xhr);
+        })
+        .always(function (xhr, status) {
+          // console.log(xhr);
+        });
+
     });
   }
   postData()
@@ -321,7 +388,7 @@ function getFilesList() {
     .then(loadingFileLog) // загружаем самый свежий файл с данными
     .then(getDescriptions)
     .then(drawing)
-    .catch();
+    .catch(handlerError);
 
 }
 

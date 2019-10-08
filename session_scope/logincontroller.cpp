@@ -218,6 +218,7 @@ void LoginController::service(HttpRequest &request, HttpResponse &response) {
                 session.set("username",username);
                 session.set("logintime",QTime::currentTime());
                 response.setStatus(200,"OK");
+                response.write ("");
                 //                response.redirect("/index.html");
             }
         }

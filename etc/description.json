@@ -83,7 +83,7 @@
                 "userName": ""
             }
         ],
-        "name": "        UPS        "
+        "name": "         UPS         "
     },
     "id=2": {
         "alias": {
@@ -151,7 +151,7 @@
                 "userName": ""
             }
         ],
-        "name": "       Meteo       "
+        "name": "        Meteo        "
     },
     "id=3": {
         "alias": {
@@ -210,6 +210,6 @@
                 "userName": ""
             }
         ],
-        "name": " Room "
+        "name": "  Room  "
     }
 }

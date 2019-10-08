@@ -38,7 +38,13 @@ void RequestMapper::service(HttpRequest& request, HttpResponse& response) {
     QString referrer = request.getHeader ("referer");
     if ((sessionId.isEmpty() || username.isEmpty ()) &&  path != "/login.html" &&  !referrer.contains ("/login.html")) {
         qDebug("RequestMapper: redirect to login page");
-        response.redirect("/login.html");
+        if(request.getHeader ("X-Requested-With") == "XMLHttpRequest"){
+            response.setStatus (401, "Unauthorized");
+            response.write ("/login.html");
+        }else {
+            response.setStatus (401, "Unauthorized");
+            response.redirect("/login.html");
+        }
         return;
     }
 
