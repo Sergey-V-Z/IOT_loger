@@ -51,8 +51,8 @@ int main(int argc, char *argv[])
     RequestMapper::templateCache=new TemplateCache(templateSettings,&app);
 
     // Template Sensors
-//    QSettings* sensorTemplates=new QSettings(configFileName,QSettings::IniFormat,&app);
-//    sensorTemplates->beginGroup("templatSensors");
+    //    QSettings* sensorTemplates=new QSettings(configFileName,QSettings::IniFormat,&app);
+    //    sensorTemplates->beginGroup("templatSensors");
 
     // Configure server sensors
     QSettings* servSet=new QSettings(configFileName,QSettings::IniFormat,&app);
@@ -64,56 +64,16 @@ int main(int argc, char *argv[])
 
     // Description Sensor
     descriptSensors = new DescriptionOfSensor(descriptFileName);
-   /* QByteArray arr = "{\"id=10\": {\
-                     \"name\": \"TestSensor\",\
-                     \"keys\": [\
-    {\
-            \"name\": \"t1\",\
-             \"userName\": \"\",\
-             \"min\": null,\
-             \"max\": null,\
-             \"first\": false,\
-             \"color\": \"\"\
-},\
-    {\
-        \"name\": \"T2\",\
-        \"userName\": \"\",\
-        \"min\": null,\
-        \"max\": null,\
-        \"first\": false,\
-        \"color\": \"\"\
-    },\
-    {\
-        \"name\": \"a3\",\
-        \"userName\": \"\",\
-        \"min\": null,\
-        \"max\": null,\
-        \"first\": false,\
-        \"color\": \"\"\
-    },\
-    {\
-        \"name\": \"A4\",\
-        \"userName\": \"\",\
-        \"min\": null,\
-        \"max\": null,\
-        \"first\": false,\
-        \"color\": \"\"\
-    }\
-    ]\
-}}";
-for (int var = 0; var < 100; ++var) {
-    bool ok = descript.setDescription (arr);
-}*/
 
-// Start the HTTP server
-RequestMapper* mapper = new RequestMapper(descriptSensors, servSet, loginBase, &app);
-new HttpListener(listenerSettings, mapper , &app);
+    // Start the HTTP server
+    RequestMapper* mapper = new RequestMapper(descriptSensors, servSet, loginBase, &app);
+    new HttpListener(listenerSettings, mapper , &app);
 
-//Server Sensors
-serverSensor = new server (descriptSensors, servSet, &app);
-new Connektor(serverSensor, mapper, &app); // объект для соеденения сигналов и слотов
+    //Server Sensors
+    serverSensor = new server (descriptSensors, servSet, &app);
+    new Connektor(serverSensor, mapper, &app); // объект для соеденения сигналов и слотов
 
-return app.exec();
+    return app.exec();
 }
 
 /**

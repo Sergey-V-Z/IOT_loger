@@ -13,7 +13,7 @@ window.onload = function () {
             // таблица для обекта
             let table = document.createElement("table"),
                 tbody = document.createElement('tbody');
-                table.className = "table table-bordered sensor";
+            table.className = "table table-bordered sensor";
             if (objPoint.hasOwnProperty(key)) {
 
                 table.innerHTML = "<caption><p>" + key + "</p></caption>";
@@ -44,20 +44,42 @@ window.onload = function () {
     }
 
     // создание обекта для запроса точки и обработчик ответа сервера
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "/vf/curentpoint");
-    xhr.onload = function () {
-        div.innerHTML = "";
-        let pointObj = JSON.parse(xhr.responseText);
-        setTable(pointObj, div);
+    function GetPoint() {
+        $.ajax({
+                url: "/vf/curentpoint",
+                type: 'GET',
+                dataType: 'json',
+            })
+            .done(function (json) {
+                try {
+                    div.innerHTML = "";
+                    setTable(json, div);
+                } catch (e) {
+                    window.setMessageFooter('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
+                }
 
-    };
-    xhr.send();
+            })
+            .fail(function (xhr, status, errorThrown) {
+                if (xhr.status == 401) {
+                    $(location).attr('href', xhr.responseText);
+                } else {
+                    alert("Sorry, there was a problem!");
+                    console.log("Error: " + errorThrown);
+                    console.log("Status: " + status);
+                    console.dir(xhr);
+                }
+            })
+            .always(function (xhr, status) {
+                // console.log(xhr);
+            });
+
+    }
+
+    GetPoint();
 
     // запрос точки
     function refresh() {
-        xhr.open("GET", "/vf/curentpoint");
-        xhr.send();
+        GetPoint();
     }
 
     /**

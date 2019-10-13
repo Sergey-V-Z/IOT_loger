@@ -35,12 +35,16 @@ private:
     static QJsonObject *currentJSON;
     static QJsonObject *currentSettings;
     static QJsonObject *currentFileNames;
+    QFile *aliaseFile;
 //    static QJsonArray *currentAllFiles;
+
 
     QSettings *settingSensors;
     QString logFolder;
     QStringList getFilesList(QString mask);
     QStringList sortDateList(QStringList list);
+    QJsonObject  createAliase(QJsonObject settingsJSON);
+    void writeAliasInFile(QJsonObject aliase);
 };
 
 #endif // CURRENTPOINT_H

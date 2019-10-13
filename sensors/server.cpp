@@ -91,6 +91,7 @@ void server::readyRead() {
         qDebug() << buffer;
     }
     Source *sens;
+
     QStringList listIN = buffer.split(';');
     if(listIN.count ()< 3){
         qWarning() << "Invailed formst message" << buffer;

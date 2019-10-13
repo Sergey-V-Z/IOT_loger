@@ -4,15 +4,152 @@
  */
 var descriptionJSON = {};
 
+/**
+ * Обработчик отправки настроек
+ * @param {*} event 
+ */
+function handlerSendSettings(event) {
+
+    // собрать данные из таблиц
+    //отправить данные на сервер
+}
+/**
+ * Создает таблицу настроек сенсора
+ * @param {Обект описания одного сенсора} objectDescript 
+ * @param {Обект настроек одного сенсора} objectSettings 
+ * @param {строка содержащая технический id=* } id
+ * @param {} idParent
+ */
+function createTableSettings(objectDescript = {}, objectSettings = {}, id = "", idParent = "") {
+    if (objectDescript == {}) {
+        return null;
+    }
+    if (objectSettings == {}) {
+        return null;
+    }
+    if (idParent == "") {
+        return null;
+    }
+    if (id == "") {
+        return null;
+    }
+
+    let nameTable = objectDescript.name,
+        parent = document.getElementById(idParent);
+
+    //создаем элементы
+    let skrollDiv = document.createElement('div'),
+        divConteiner = document.createElement('div'),
+        table = document.createElement('table'),
+        caption = document.createElement('caption'),
+        tbody = document.createElement('tbody'),
+        hrLine = document.createElement('hr');
+
+    hrLine.className = "line";
+    caption.innerHTML = `<h3> ${nameTable} </h3>`;
+    caption.classList += "text-center";
+    skrollDiv.className = "table-responsive";
+    table.className = "table table-bordered description";
+    table.id = id;
+    divConteiner.id = id.replace(/=/, ''); // удаляем символ и записывваем значение в id
+
+    // Создание и астройка кнопки
+    let divRow = document.createElement('div'),
+        divCol1 = document.createElement('div'),
+        buttonSend = document.createElement('button');
+
+    divRow.className = "row-no-gutters";
+    divCol1.className = "col-sm-1 col-md-1";
+    buttonSend.className = "btn btn-primary";
+    buttonSend.name = id;
+    buttonSend.innerHTML = "Save";
+    buttonSend.addEventListener('click', handlerSendSettings);
+    // собираем панельку кнопок
+    divCol1.append(buttonSend);
+    divRow.append(divCol1);
+
+
+    // Заполнение таблицы
+    for (const key in objectSettings) {
+        if (objectSettings.hasOwnProperty(key)) {
+            const element = objectSettings[key];
+            let tr = document.createElement('tr'),
+                td1 = document.createElement('td'),
+                td2 = document.createElement('td');
+            let input = document.createElement('input');
+
+            input.name = key;
+            input.value = element;
+            td1.innerHTML = key;
+            td2.append(input);
+            tr.append(td1);
+            tr.append(td2);
+            tbody.append(tr);
+        }
+    }
+
+    //Сборка и вставка таблицы 
+    table.append(caption);
+    table.append(tbody);
+    skrollDiv.append(table);
+    divConteiner.append(skrollDiv);
+    divConteiner.append(divRow);
+    divConteiner.append(hrLine);
+    parent.append(divConteiner);
+
+}
+
+function getSettings(path, idParent = "") {
+    $.ajax({
+            url: path,
+            type: 'GET',
+            dataType: 'json',
+
+        })
+        .done(function (json) {
+            if ($.isEmptyObject(json)) {
+                console.log("Start pause");
+                setTimeout(getSettings, 5000, path, idParent);
+            } else {
+                for (const key in json) {
+                    if (json.hasOwnProperty(key)) {
+                        const element = json[key];
+                        createTableSettings(descriptionJSON[key], element, key, idParent);
+                    }
+                }
+            }
+
+        })
+        .fail(function (xhr, status, errorThrown) {
+            if (xhr.status == 401) {
+                $(location).attr('href', xhr.responseText);
+            } else {
+                alert("Sorry, there was a problem!");
+                console.log("Error: " + errorThrown);
+                console.log("Status: " + status);
+                console.dir(xhr);
+            }
+        })
+        .always(function (xhr, status) {});
+}
+/**
+ * Запрос настроек сенсоров у сервера и создание таблиц по ним
+ * @param {*} idParent 
+ */
+function createTablesSettings(idParent = "") {
+    if (idParent == "") {
+        return null;
+    }
+
+    getSettings('/vf/settings', idParent);
+}
 
 /**
  * Создает таблицу дескрипьора из данных в обекте и устанааливает ее в parent
  * @param {Обект описания одного сенсора} object 
  * @param {строка содержащая технический id=* } id
- * @param {элемент страници для размешения таблицы} idParent
+ * @param {} idParent
  */
-
-
 function createTable(object = {}, id = "", idParent = "") {
     if (object == {}) {
         return null;
@@ -43,9 +180,9 @@ function createTable(object = {}, id = "", idParent = "") {
     hrLine.className = "line";
     caption.innerHTML = `<h3> ${nameTable} </h3>`;
     caption.classList += "text-center";
-    skrollDiv.className = "table-responsive-sm";
+    skrollDiv.className = "table-responsive";
     table.className = "table table-bordered description";
-    table.id = id;
+    table.id = 'set-' + id;
     trHead.id = "heads";
     trAlias.id = "alias";
     divConteiner.id = id.replace(/=/, ''); // удаляем символ и записывваем значение в id
@@ -59,7 +196,7 @@ function createTable(object = {}, id = "", idParent = "") {
 
     divRow.className = "row-no-gutters";
     divCol1.className = "col-sm-1 col-md-1";
-    divCol1.className = "col-sm-1 col-md-1";
+    divCol2.className = "col-sm-1 col-md-1";
     buttonSend.className = "btn btn-primary";
     buttonSend.name = id;
     buttonSend.innerHTML = "Save";
@@ -518,4 +655,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById("myModalBox").addEventListener('click', addNewDeskription);
 
+    createTablesSettings('setSensor');
 });
